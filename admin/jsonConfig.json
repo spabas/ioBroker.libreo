@@ -1,0 +1,31 @@
+{
+	"i18n": true,
+	"type": "panel",
+	"items": {
+		"username": {
+			"type": "text",
+			"label": "username",
+			"newLine": true
+		},
+		"password": {
+			"type": "text",
+			"label": "password",
+			"newLine": true
+		},
+		"portal_url": {
+			"type": "text",
+			"label": "portal URL",
+			"newLine": true
+		},
+		"login_api_url": {
+			"type": "text",
+			"label": "login API URL",
+			"newLine": true
+		},
+		"issuer": {
+			"type": "text",
+			"label": "identity URL",
+			"newLine": true
+		}
+	}
+}

@@ -1,0 +1,93 @@
+{
+	"common": {
+		"name": "libreo",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Libreo Wallbox",
+		"titleLang": {
+			"en": "Libreo Wallbox",
+			"de": "Libreo Wallbox",
+			"ru": "Настенная коробка Либрео",
+			"pt": "Wallbox grátis",
+			"nl": "Libreo-wallbox",
+			"fr": "Boîte murale Libreo",
+			"it": "Scatola a muro Libreo",
+			"es": "Caja de pared Libreo",
+			"pl": "Libreo Wallbox",
+			"uk": "Libreo Wallbox",
+			"zh-cn": "Libreo 墙盒"
+		},
+		"desc": {
+			"en": "libreo",
+			"de": "Buch",
+			"ru": "либрео",
+			"pt": "livro",
+			"nl": "libreo",
+			"fr": "libreo",
+			"it": "libreo",
+			"es": "libreo",
+			"pl": "libreo",
+			"uk": "лібрео",
+			"zh-cn": "歌词"
+		},
+		"authors": [
+			"spabas <bastian.spaeth@gmx.de>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "libreo.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/spabas/ioBroker.libreo/main/admin/libreo.png",
+		"readme": "https://github.com/spabas/ioBroker.libreo/blob/main/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "energy",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.1.13"
+			}
+		]
+	},
+	"native": {
+		"username": "",
+		"password": "****",
+		"portal_url": "https://portal.libreo.cloud",
+		"login_api_url": "https://id.libreo.cloud/api/account/login",
+		"issuer": "https://id.libreo.cloud"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
