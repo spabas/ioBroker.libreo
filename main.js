@@ -1399,6 +1399,19 @@ class Libreo extends utils.Adapter {
 						native: {},
 					});
 
+					await instance.setObjectNotExistsAsync(path + ".last_updated", {
+						type: "state",
+						common: {
+							name: "online",
+							type: "number",
+							role: "value.time",
+							read: true,
+							write: false,
+						},
+						native: {},
+					});
+					await this.setStateAsync(path + ".last_updated", { val: new Date().getTime(), ack: true });
+
 					await instance.setObjectNotExistsAsync(path + ".online", {
 						type: "state",
 						common: {
@@ -1538,7 +1551,9 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync(path + ".currentSessionState.startTime", { val: metric.currentSessionState.startTime, ack: true });
+
+						if (metric.currentSessionState.startTime)
+							await this.setStateAsync(path + ".currentSessionState.startTime", { val: metric.currentSessionState.startTime, ack: true });
 
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.status", {
 							type: "state",
@@ -1551,7 +1566,9 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync(path + ".currentSessionState.status", { val: metric.currentSessionState.status, ack: true });
+
+						if (metric.currentSessionState.status)
+							await this.setStateAsync(path + ".currentSessionState.status", { val: metric.currentSessionState.status, ack: true });
 
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger", {
 							type: "state",
@@ -1564,7 +1581,9 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync(path + ".currentSessionState.trigger", { val: metric.currentSessionState.trigger, ack: true });
+
+						if (metric.currentSessionState.trigger)
+							await this.setStateAsync(path + ".currentSessionState.trigger", { val: metric.currentSessionState.trigger, ack: true });
 
 						if (metric.currentSessionState.triggerUser) {
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_firstName", {
@@ -1578,7 +1597,9 @@ class Libreo extends utils.Adapter {
 								},
 								native: {},
 							});
-							await this.setStateAsync(path + ".currentSessionState.trigger_firstName", { val: metric.currentSessionState.triggerUser.firstName, ack: true });
+
+							if (metric.currentSessionState.triggerUser.firstName)
+								await this.setStateAsync(path + ".currentSessionState.trigger_firstName", { val: metric.currentSessionState.triggerUser.firstName, ack: true });
 
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_lastName", {
 								type: "state",
@@ -1591,7 +1612,9 @@ class Libreo extends utils.Adapter {
 								},
 								native: {},
 							});
-							await this.setStateAsync(path + ".currentSessionState.trigger_lastName", { val: metric.currentSessionState.triggerUser.lastName, ack: true });
+
+							if (metric.currentSessionState.triggerUser.lastName)
+								await this.setStateAsync(path + ".currentSessionState.trigger_lastName", { val: metric.currentSessionState.triggerUser.lastName, ack: true });
 
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_originalUser", {
 								type: "state",
@@ -1604,7 +1627,9 @@ class Libreo extends utils.Adapter {
 								},
 								native: {},
 							});
-							await this.setStateAsync(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
+
+							if (metric.currentSessionState.triggerUser.originalUser)
+								await this.setStateAsync(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
 						}
 					} else {
 						//Clear current session states, if we have no active session
