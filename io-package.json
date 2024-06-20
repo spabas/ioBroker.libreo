@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "news": {
+      "1.1.2": {
+        "en": "last-updated property and small improvements",
+        "de": "letztes objekt und kleine verbesserungen",
+        "ru": "недвижимость и небольшие улучшения",
+        "pt": "propriedade de última data e pequenas melhorias",
+        "nl": "laatste update van onroerend goed en kleine verbeteringen",
+        "fr": "dernière mise à jour des biens et petites améliorations",
+        "it": "proprietà last-updated e piccoli miglioramenti",
+        "es": "propiedades actualizadas y pequeñas mejoras",
+        "pl": "ostatnia aktualizacja nieruchomości i niewielkie ulepszenia",
+        "uk": "довгострокова нерухомість та невеликі поліпшення",
+        "zh-cn": "最新财产和小改进"
+      },
       "1.1.1": {
         "en": "get orgs periodicly and open new web socket every 10 minutes",
         "de": "orgs regelmäßig zu bekommen und neue netzsteckdose alle 10 minuten öffnen",
