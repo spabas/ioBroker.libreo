@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "load users\nset charging (impersenation user)",
+        "de": "benutzer\neinstellen des ladevorgangs",
+        "ru": "загрузки пользователей\nнастройка зарядки (пользователь-империментация)",
+        "pt": "usuários de carga\nset de carregamento (usuário de iniciação)",
+        "nl": "gebruikers laden\nopladen instellen (impersenation user)",
+        "fr": "charge les utilisateurs\njeu de charge (utilisateur d'impersénation)",
+        "it": "utenti di carico\nset di ricarica (utente di accettazione)",
+        "es": "usuarios de carga\nconfiguración de carga (usuario de implantación)",
+        "pl": "użytkownicy ładunków\nładowanie zestawu (użytkownik impersenacji)",
+        "uk": "користувачів\nвстановити зарядку (користувач)",
+        "zh-cn": "装入用户\n集充电( 隐形用户)"
+      },
       "1.0.0": {
         "en": "initial release",
         "de": "erstausstrahlung",
