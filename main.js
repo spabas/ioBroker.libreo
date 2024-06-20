@@ -103,7 +103,7 @@ class Libreo extends utils.Adapter {
 
 				this.setInterval(async () => {
 					await this.GetOrgs();
-				}, 120000);
+				}, 1200000);
 			}
 			else
 				this.log.error("Missing credentials in config");
