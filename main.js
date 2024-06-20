@@ -14,7 +14,7 @@ const cheerio = require("cheerio");
 const { wrapper } = require("axios-cookiejar-support");
 const tough = require("tough-cookie");
 const CircularJSON = require("circular-json");
-const WebSocket = require('ws');
+const WebSocket = require("ws");
 
 class Libreo extends utils.Adapter {
 
@@ -58,6 +58,7 @@ class Libreo extends utils.Adapter {
 		this.subscribeStates("*.current");
 
 		const instance = this;
+		this.socketInvocationId = 1;
 
 		let sessionIntervalUntil = new Date();
 		let sessionIntervalFrom = new Date();
@@ -99,6 +100,10 @@ class Libreo extends utils.Adapter {
 						this.log.info("Getting charging sessions successfull");
 					}
 				}, 300000);
+
+				this.setInterval(async () => {
+					await this.GetOrgs();
+				}, 120000);
 			}
 			else
 				this.log.error("Missing credentials in config");
@@ -156,6 +161,10 @@ class Libreo extends utils.Adapter {
 			const parts = id.split(".");
 			const lastPart = parts[parts.length - 1];
 
+			const chargingUserStateId = id.replace(/(\.[^.]*)$/, ".chargingUserId");
+			this.log.info("Try getting charging user from state: " + chargingUserStateId);
+			const userId = await this.GetChargingUserId(chargingUserStateId);
+
 			if (lastPart == "current") {
 				this.log.info("Try setting current");
 				const station = parts.find(part => part.startsWith("cst-"));
@@ -169,9 +178,10 @@ class Libreo extends utils.Adapter {
 			else if (lastPart == "chargingStart") {
 				this.log.info("Try start charging");
 				const station = parts.find(part => part.startsWith("cst-"));
-				if (await this.Charging(station, true, true)) {
+
+				if (await this.Charging(station, true, userId, true)) {
 					state.ack = true;
-					this.log.info("Start charging successfull");
+					this.log.info("Start charging successfull for user id: " + userId);
 				}
 				else
 					this.log.warn("Charging request couldn't be executed!");
@@ -179,9 +189,10 @@ class Libreo extends utils.Adapter {
 			else if (lastPart == "chargingStop") {
 				this.log.info("Try stop charging");
 				const station = parts.find(part => part.startsWith("cst-"));
-				if (await this.Charging(station, false, true)) {
+
+				if (await this.Charging(station, false, userId, true)) {
 					state.ack = true;
-					this.log.info("Stop charging successfull");
+					this.log.info("Stop charging successfull for user id: " + userId);
 				}
 				else
 					this.log.warn("Charging request couldn't be executed!");
@@ -190,6 +201,15 @@ class Libreo extends utils.Adapter {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
 		}
+	}
+
+	async GetChargingUserId(id) {
+		let userId = null;
+		const chargingUserState = await this.getStateAsync(id);
+		if (chargingUserState?.val)
+			userId = chargingUserState?.val;
+
+		return userId;
 	}
 
 	// If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
@@ -384,6 +404,7 @@ class Libreo extends utils.Adapter {
 					if (index === orgsData.length - 1) {
 						this.currentNode = path;
 						await this.SetOrg(org.path);
+						await this.GetOrg(org.path);
 						await this.GetStationsOfCurrentOrg(path);
 						await this.StartWebSocket(org.path, path);
 					}
@@ -397,6 +418,90 @@ class Libreo extends utils.Adapter {
 		}
 		catch (error) {
 			this.log.error("Error while getting orgs! " + error);
+		}
+	}
+
+	async GetOrg(org) {
+
+		try {
+
+			const xsrfToken = this.GetXsrfTokenFromCookie("portal.libreo.cloud");
+			const getOrgResponse = await this.client.get(`https://portal.libreo.cloud/api/identity/orgs/${org}`,
+				{
+					headers: {
+						"Content-Type": "application/json",
+						"X-Xsrf-Token": xsrfToken,
+						"Referer": "https://portal.libreo.cloud/users"
+					},
+					validateStatus: null,
+					params: {
+						"api-version": "2.0",
+					}
+				});
+
+			//console.log("GetOrg-Response: " + CircularJSON.stringify(getOrgResponse));
+
+			if (getOrgResponse.status === 200)
+			{
+				this.log.debug("GetOrg-Response-Status: " + getOrgResponse.status);
+
+				const userData = getOrgResponse.data.users;
+				userData.forEach(async(user) => {
+					await this.setObjectNotExistsAsync("users." + user.id, {
+						type: "channel",
+						common: {
+							name: user.userName
+						},
+						native: {},
+					});
+
+					await this.setObjectNotExistsAsync("users." + user.id + ".given_name", {
+						type: "state",
+						common: {
+							name: "given name",
+							type: "string",
+							role: "text",
+							read: true,
+							write: false,
+						},
+						native: {},
+					});
+					await this.setStateAsync("users." + user.id + ".given_name", { val: user.firstName, ack: true });
+
+					await this.setObjectNotExistsAsync("users." + user.id + ".family_name", {
+						type: "state",
+						common: {
+							name: "family name",
+							type: "string",
+							role: "text",
+							read: true,
+							write: false,
+						},
+						native: {},
+					});
+					await this.setStateAsync("users." + user.id + ".family_name", { val: user.lastName, ack: true });
+
+					await this.setObjectNotExistsAsync("users." + user.id + ".roleId", {
+						type: "state",
+						common: {
+							name: "role id",
+							type: "string",
+							role: "text",
+							read: true,
+							write: false,
+						},
+						native: {},
+					});
+					await this.setStateAsync("users." + user.id + ".roleId", { val: user.roleId, ack: true });
+				});
+
+			}
+			else {
+				this.log.warn("Getting org failed");
+			}
+		}
+		catch (error) {
+			this.log.error("Error while getting org " + org + ": " + error);
 		}
 	}
 
@@ -670,6 +775,18 @@ class Libreo extends utils.Adapter {
 						native: {},
 					});
 
+					await that.setObjectNotExistsAsync(path + "." + station.id + ".chargingUserId", {
+						type: "state",
+						common: {
+							name: "charging user id",
+							type: "string",
+							role: "text",
+							read: true,
+							write: true,
+						},
+						native: {},
+					});
+
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".current", {
 						type: "state",
 						common: {
@@ -739,13 +856,13 @@ class Libreo extends utils.Adapter {
 		}
 	}
 
-	async Charging(station, startOrStop, loginIfForbidden = false) {
+	async Charging(station, startOrStop, userId, loginIfForbidden = false) {
 		try {
 
 			const xsrfToken = this.GetXsrfTokenFromCookie("portal.libreo.cloud");
 			const apiResponse = await this.client.post(`https://portal.libreo.cloud/api/customer/chargingstations/${station}/cmd/charge/${startOrStop}`,
 				{
-					impersonatedUserId: null
+					impersonatedUserId: userId
 				},
 				{
 					headers: {
@@ -766,7 +883,7 @@ class Libreo extends utils.Adapter {
 			}
 			else if (apiResponse.status === 401 && loginIfForbidden) {
 				await this.Login();
-				await this.Charging(station, startOrStop, false);
+				await this.Charging(station, startOrStop, userId, false);
 			}
 			else {
 				this.log.warn("Charging request failed");
@@ -1180,8 +1297,12 @@ class Libreo extends utils.Adapter {
 
 				const instance = this;
 
+				// Bestehende WebSocket-Verbindung schließen
+				if (instance.ws)
+					instance.ws.close();
+
 				// Verbindung zum WebSocket-Server herstellen
-				const ws = new WebSocket(wsUrl,
+				instance.ws = new WebSocket(wsUrl,
 					{
 						headers: {
 							"Cookie": cookieHeader,
@@ -1191,16 +1312,16 @@ class Libreo extends utils.Adapter {
 					});
 
 				// Ereignishandler für die Verbindungseröffnung
-				ws.on("open", () => {
+				instance.ws.on("open", () => {
 					instance.log.info("WebSocket connection opened.");
 
 					// Send handshake
-					ws.send(JSON.stringify({ protocol: "json", version: 1 }) + "\u001e");
+					instance.ws.send(JSON.stringify({ protocol: "json", version: 1 }) + "\u001e");
 				});
 
 				// Ereignishandler für empfangene Nachrichten
-				let socketInvocationId = 1;
-				ws.on("message", (data) => {
+				instance.socketInvocationId = instance.socketInvocationId + 1;
+				instance.ws.on("message", (data) => {
 
 					const messageString = data.toString();
 					try {
@@ -1212,13 +1333,13 @@ class Libreo extends utils.Adapter {
 							const message = JSON.stringify(
 								{
 									arguments: [org],
-									invocationId: ("" + socketInvocationId++),
+									invocationId: ("" + instance.socketInvocationId++),
 									target: "SubscribeMetricsByOrgPath",
 									type: 1
 								}
 							) + "\u001e";
 							instance.log.debug("send ws message: " + message);
-							ws.send(message);
+							instance.ws.send(message);
 						}
 						else {
 							const messages = messageString.split("\u001e");
@@ -1234,17 +1355,17 @@ class Libreo extends utils.Adapter {
 				});
 
 				// Ereignishandler für Verbindungsfehler
-				ws.on("error", (error) => {
+				instance.ws.on("error", (error) => {
 					instance.log.error("WebSocket-Error: " + error);
 				});
 
 				// Ereignishandler für Verbindungsbeendigung
-				ws.on("close", () => {
+				instance.ws.on("close", () => {
 					instance.log.info("WebSocket connection closed.");
 				});
 
 				// Zusätzliche Protokollierung der Verbindungsdetails
-				ws.on("unexpected-response", (request, response) => {
+				instance.ws.on("unexpected-response", (request, response) => {
 					instance.log.warn("Unexpexted ws response:");
 					instance.log.warn("Status Code: " + response.statusCode);
 					instance.log.warn("Headers: " + JSON.stringify(response.headers));
@@ -1492,7 +1613,7 @@ class Libreo extends utils.Adapter {
 
 						if (states && Object.keys(states).length > 0) {
 							Object.keys(states).forEach(async(stateId) => {
-								await this.setStateAsync(stateId, { val: null, ack: true }); 
+								await this.setStateAsync(stateId, { val: null, ack: true });
 							});
 						}
 					}
