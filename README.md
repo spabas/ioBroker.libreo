@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) get orgs periodicly and open new web socket every 10 minutes
+
 ### 1.1.0 (2024-06-20)
 * (spabas) load users
 * (spabas) set charging (impersenation user)
