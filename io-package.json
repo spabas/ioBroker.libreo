@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "news": {
+      "1.1.1": {
+        "en": "get orgs periodicly and open new web socket every 10 minutes",
+        "de": "orgs regelmäßig zu bekommen und neue netzsteckdose alle 10 minuten öffnen",
+        "ru": "получать оргс периодически и открывать новые розетки каждые 10 минут",
+        "pt": "obter orgs periodicamente e abrir novo soquete web a cada 10 minutos",
+        "nl": "krijgen orgs periodiek en open nieuwe web socket elke 10 minuten",
+        "fr": "obtenir des orgs périodiquement et ouvrir une nouvelle prise web toutes les 10 minutes",
+        "it": "ottenere org periodicamente e aprire nuova presa web ogni 10 minuti",
+        "es": "obtener orgs periódicamente y abrir nuevas tomas web cada 10 minutos",
+        "pl": "uzyskać orgs okresowo i otworzyć nowe gniazdo co 10 minut",
+        "uk": "отримайте orgs періодично і відкрийте новий веб-роз'єм кожні 10 хвилин",
+        "zh-cn": "每10分钟定期获得或打开新网络套接字"
+      },
       "1.1.0": {
         "en": "load users\nset charging (impersenation user)",
         "de": "benutzer\neinstellen des ladevorgangs",
