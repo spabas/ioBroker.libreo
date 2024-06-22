@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "news": {
+      "1.2.0": {
+        "en": "load initial loading sessions from begin of current year",
+        "de": "laden anfängliche ladesitzungen ab beginn des laufenden jahres",
+        "ru": "загрузка начальных сессий загрузки с начала текущего года",
+        "pt": "carregar sessões de carregamento inicial do início do ano atual",
+        "nl": "beginnende laadsessies vanaf het begin van het lopende jaar laden",
+        "fr": "charger les séances de chargement initiales à partir du début de l'année en cours",
+        "it": "caricare le sessioni iniziali di caricamento dall'inizio dell'anno corrente",
+        "es": "sesiones de carga inicial desde comienzos del año actual",
+        "pl": "załaduj początkowe sesje wczytywania od początku bieżącego roku",
+        "uk": "завантаження початкових навантажень з початку поточного року",
+        "zh-cn": "装入本年度开始的初始装入会话"
+      },
       "1.1.2": {
         "en": "last-updated property and small improvements",
         "de": "letztes objekt und kleine verbesserungen",
