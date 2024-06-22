@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) load initial loading sessions from begin of current year
+
 ### 1.1.2 (2024-06-20)
 * (spabas) last-updated property and small improvements
 

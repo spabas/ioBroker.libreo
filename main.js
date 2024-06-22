@@ -64,9 +64,9 @@ class Libreo extends utils.Adapter {
 		let sessionIntervalFrom = new Date();
 
 		//initial load of sessions
-		if (!this.objectExists("chargingsessions")) {
-			sessionIntervalFrom.setMonth(0);
-			sessionIntervalFrom.setDate(1);
+		const sessions_exists = await this.objectExists("chargingsessions");
+		if (!sessions_exists) {
+			sessionIntervalFrom = new Date(sessionIntervalFrom.getFullYear(), 0, 1);
 		}
 		//append sessions of last 30/31 days
 		else
@@ -1063,7 +1063,9 @@ class Libreo extends utils.Adapter {
 					if (!session)
 						return;
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId, {
+					const sessionId = (session.chargingSessionId + "").padStart(5, "0");
+
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId, {
 						type: "channel",
 						common: {
 							name: session.creationDate
@@ -1071,7 +1073,7 @@ class Libreo extends utils.Adapter {
 						native: {},
 					});
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".id", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".id", {
 						type: "state",
 						common: {
 							name: "id",
@@ -1082,9 +1084,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".id", { val: session.id, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".id", { val: session.id, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".chargingStationId", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStationId", {
 						type: "state",
 						common: {
 							name: "charging station id",
@@ -1095,9 +1097,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".chargingStationId", { val: session.chargingStationId, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStationId", { val: session.chargingStationId, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".chargingStationName", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStationName", {
 						type: "state",
 						common: {
 							name: "charging station name",
@@ -1108,9 +1110,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".chargingStationName", { val: session.chargingStationName, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStationName", { val: session.chargingStationName, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".chargingStatus", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStatus", {
 						type: "state",
 						common: {
 							name: "charging status",
@@ -1121,9 +1123,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".chargingStatus", { val: session.chargingStatus, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStatus", { val: session.chargingStatus, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".location", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".location", {
 						type: "state",
 						common: {
 							name: "charging location",
@@ -1134,9 +1136,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".location", { val: session.location, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".location", { val: session.location, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".organizationPath", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".organizationPath", {
 						type: "state",
 						common: {
 							name: "organization path",
@@ -1147,9 +1149,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".organizationPath", { val: session.organizationPath, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".organizationPath", { val: session.organizationPath, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".sessionStarted", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionStarted", {
 						type: "state",
 						common: {
 							name: "session started",
@@ -1160,9 +1162,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".sessionStarted", { val: session.sessionStarted, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".sessionStarted", { val: session.sessionStarted, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".sessionCompleted", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionCompleted", {
 						type: "state",
 						common: {
 							name: "session completed",
@@ -1173,9 +1175,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".sessionCompleted", { val: session.sessionCompleted, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".sessionCompleted", { val: session.sessionCompleted, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".sessionDuration", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionDuration", {
 						type: "state",
 						common: {
 							name: "session duration in seconds",
@@ -1187,9 +1189,9 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".sessionDuration", { val: session.sessionDuration, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".sessionDuration", { val: session.sessionDuration, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".sessionEnergyAmount", {
+					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionEnergyAmount", {
 						type: "state",
 						common: {
 							name: "session energy amount in Wh",
@@ -1201,54 +1203,49 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".sessionEnergyAmount", { val: session.sessionEnergyAmount, ack: true });
+					await this.setStateAsync("chargingsessions." + sessionId + ".sessionEnergyAmount", { val: session.sessionEnergyAmount, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".user", {
-						type: "channel",
-						common: {
-							name: session.creationDate
-						},
-						native: {},
-					});
+					if (session.user) {
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".user" + ".id", {
-						type: "state",
-						common: {
-							name: "user id",
-							type: "string",
-							role: "text",
-							read: true,
-							write: false,
-						},
-						native: {},
-					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".user" + ".id", { val: session.user.id, ack: true });
+						await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".user" + ".id", {
+							type: "state",
+							common: {
+								name: "user id",
+								type: "string",
+								role: "text",
+								read: true,
+								write: false,
+							},
+							native: {},
+						});
+						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".id", { val: session.user.id, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".user" + ".firstName", {
-						type: "state",
-						common: {
-							name: "first name",
-							type: "string",
-							role: "text",
-							read: true,
-							write: false,
-						},
-						native: {},
-					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".user" + ".firstName", { val: session.user.firstName, ack: true });
+						await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".user" + ".firstName", {
+							type: "state",
+							common: {
+								name: "first name",
+								type: "string",
+								role: "text",
+								read: true,
+								write: false,
+							},
+							native: {},
+						});
+						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".firstName", { val: session.user.firstName, ack: true });
 
-					await this.setObjectNotExistsAsync("chargingsessions." + session.chargingSessionId + ".user" + ".lastName", {
-						type: "state",
-						common: {
-							name: "last name",
-							type: "string",
-							role: "text",
-							read: true,
-							write: false,
-						},
-						native: {},
-					});
-					await this.setStateAsync("chargingsessions." + session.chargingSessionId + ".user" + ".lastName", { val: session.user.lastName, ack: true });
+						await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".user" + ".lastName", {
+							type: "state",
+							common: {
+								name: "last name",
+								type: "string",
+								role: "text",
+								read: true,
+								write: false,
+							},
+							native: {},
+						});
+						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".lastName", { val: session.user.lastName, ack: true });
+					}
 				});
 
 				return true;
