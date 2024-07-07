@@ -1567,6 +1567,21 @@ class Libreo extends utils.Adapter {
 						if (metric.currentSessionState.status)
 							await this.setStateAsync(path + ".currentSessionState.status", { val: metric.currentSessionState.status, ack: true });
 
+						await instance.setObjectNotExistsAsync(path + ".currentSessionState.consumedEnergy", {
+							type: "state",
+							common: {
+								name: "consumedEnergy",
+								type: "number",
+								role: "value",
+								read: true,
+								write: false,
+							},
+							native: {},
+						});
+
+						if (metric.currentSessionState.consumedEnergy)
+							await this.setStateAsync(path + ".currentSessionState.consumedEnergy", { val: metric.currentSessionState.consumedEnergy, ack: true });
+
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger", {
 							type: "state",
 							common: {

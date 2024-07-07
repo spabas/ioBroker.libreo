@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) get consumed energy in current session
+
 ### 1.2.0 (2024-06-22)
 * (spabas) load initial loading sessions from begin of current year
 
