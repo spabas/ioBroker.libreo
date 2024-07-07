@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "news": {
+      "1.3.0": {
+        "en": "get consumed energy in current session",
+        "de": "energie in der aktuellen sitzung verbrauchen",
+        "ru": "получать потребленную энергию на текущей сессии",
+        "pt": "obter energia consumida na sessão atual",
+        "nl": "krijgen verbruikte energie in de huidige sessie",
+        "fr": "consommer de l'énergie dans la session en cours",
+        "it": "ottenere energia consumata nella sessione corrente",
+        "es": "obtener energía consumida en la sesión actual",
+        "pl": "uzyskać zużytą energię w bieżącej sesji",
+        "uk": "споживати енергію в поточному сеансі",
+        "zh-cn": "获得本届会议消耗的能源"
+      },
       "1.2.0": {
         "en": "load initial loading sessions from begin of current year",
         "de": "laden anfängliche ladesitzungen ab beginn des laufenden jahres",
