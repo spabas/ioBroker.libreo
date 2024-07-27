@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) don't clear current session if recieving charging state without currentSessionState
+
 ### 1.3.0 (2024-07-07)
 * (spabas) get consumed energy in current session
 
