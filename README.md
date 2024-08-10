@@ -19,8 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.3.2 (2024-08-10)
 * (spabas) logo update
 
 ### 1.3.1 (2024-07-27)
