@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) session end now only by receiving status 267, not anymore if no currentSessionState is received
+
 ### 1.3.2 (2024-08-10)
 * (spabas) logo update
 

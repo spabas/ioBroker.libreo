@@ -1643,15 +1643,18 @@ class Libreo extends utils.Adapter {
 							if (metric.currentSessionState.triggerUser.originalUser)
 								await this.setStateAsync(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
 						}
-					} else if (metric.charging != true) {
-						//Clear current session states, if we have no active session
-						const pattern = path + ".currentSessionState.*";
-						const states = await this.getStatesAsync(pattern);
 
-						if (states && Object.keys(states).length > 0) {
-							Object.keys(states).forEach(async(stateId) => {
-								await this.setStateAsync(stateId, { val: null, ack: true });
-							});
+						//Session Ende
+						if (metric.currentSessionState.status == 267)
+						{
+							const pattern = path + ".currentSessionState.*";
+							const states = await this.getStatesAsync(pattern);
+
+							if (states && Object.keys(states).length > 0) {
+								Object.keys(states).forEach(async(stateId) => {
+									await this.setStateAsync(stateId, { val: null, ack: true });
+								});
+							}
 						}
 					}
 				});
