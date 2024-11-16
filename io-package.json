@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.3.2",
+    "version": "1.3.3",
     "news": {
+      "1.3.3": {
+        "en": "session end now only by receiving status 267, not anymore if no currentSessionState is received",
+        "de": "sitzungsende jetzt nur durch Empfang des Status 267, nicht mehr, wenn kein aktuelleSessionState erhalten wird",
+        "ru": "сессия заканчивается сейчас только на основании получения статуса 267, а не в том случае, если не будет получено ни одного действующего государства",
+        "pt": "sessão termina agora apenas recebendo o status 267, não mais se nenhum estado atual é recebido",
+        "nl": "sessie eindigt nu alleen door het ontvangen van status 267, niet meer als er geen currentSessionState is ontvangen",
+        "fr": "la session se termine maintenant seulement en recevant l'état 267, pas plus si aucun courantSessionState n'est reçu",
+        "it": "fine sessione ora solo ricevendo lo stato 267, non più se non viene ricevuto nessun correnteSessionState",
+        "es": "el período de sesiones termina ahora sólo recibiendo el estado 267, ya no si no se recibe el Estado de la Sesión actual",
+        "pl": "sesja kończy się teraz tylko przez otrzymanie statusu 267, już nie, jeśli nie ma currentSessionState",
+        "uk": "закінчення сеансу тепер тільки шляхом отримання статусу 267, не більше, якщо немає струму",
+        "zh-cn": "届会现在仅以获得第267次地位结束,如果没有收到当前的届会状态,则不再有"
+      },
       "1.3.2": {
         "en": "logo update",
         "de": "logo-update",
@@ -80,19 +93,6 @@
         "pl": "uzyskać orgs okresowo i otworzyć nowe gniazdo co 10 minut",
         "uk": "отримайте orgs періодично і відкрийте новий веб-роз'єм кожні 10 хвилин",
         "zh-cn": "每10分钟定期获得或打开新网络套接字"
-      },
-      "1.1.0": {
-        "en": "load users\nset charging (impersenation user)",
-        "de": "benutzer\neinstellen des ladevorgangs",
-        "ru": "загрузки пользователей\nнастройка зарядки (пользователь-империментация)",
-        "pt": "usuários de carga\nset de carregamento (usuário de iniciação)",
-        "nl": "gebruikers laden\nopladen instellen (impersenation user)",
-        "fr": "charge les utilisateurs\njeu de charge (utilisateur d'impersénation)",
-        "it": "utenti di carico\nset di ricarica (utente di accettazione)",
-        "es": "usuarios de carga\nconfiguración de carga (usuario de implantación)",
-        "pl": "użytkownicy ładunków\nładowanie zestawu (użytkownik impersenacji)",
-        "uk": "користувачів\nвстановити зарядку (користувач)",
-        "zh-cn": "装入用户\n集充电( 隐形用户)"
       }
     },
     "title": "Libreo Wallbox",
