@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "news": {
+      "1.4.1": {
+        "en": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "de": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "ru": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "pt": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "nl": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "fr": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "it": "Sessione-Ende auch bei Stato 277 (fedele, aber noch angesteckt ?), damit Löschen der aktiven Sessione",
+        "es": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "pl": "Session- Ende auch bei Status 277 (beendet, aber noch angesteckt?), damit Löschen der aktiven Session",
+        "uk": "Сесія-Ende auch bei Статус 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
+        "zh-cn": "Session-Ende auch bei status 277 (beendet, aber noch angesteckt ?), Damit Löschen der aktiven 会话 "
+      },
       "1.4.0": {
         "en": "new metrics data (current, power and voltage)",
         "de": "neue metrikdaten (strom, leistung und spannung)",
@@ -80,19 +93,6 @@
         "pl": "załaduj początkowe sesje wczytywania od początku bieżącego roku",
         "uk": "завантаження початкових навантажень з початку поточного року",
         "zh-cn": "装入本年度开始的初始装入会话"
-      },
-      "1.1.2": {
-        "en": "last-updated property and small improvements",
-        "de": "letztes objekt und kleine verbesserungen",
-        "ru": "недвижимость и небольшие улучшения",
-        "pt": "propriedade de última data e pequenas melhorias",
-        "nl": "laatste update van onroerend goed en kleine verbeteringen",
-        "fr": "dernière mise à jour des biens et petites améliorations",
-        "it": "proprietà last-updated e piccoli miglioramenti",
-        "es": "propiedades actualizadas y pequeñas mejoras",
-        "pl": "ostatnia aktualizacja nieruchomości i niewielkie ulepszenia",
-        "uk": "довгострокова нерухомість та невеликі поліпшення",
-        "zh-cn": "最新财产和小改进"
       }
     },
     "title": "Libreo Wallbox",

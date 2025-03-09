@@ -19,8 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.4.1 (2025-03-09)
 * (spabas) Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session
 
 ### 1.4.0 (2025-03-09)
