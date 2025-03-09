@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) Session-Ende durch Unplugging => Status "Available"
+
 ### 1.4.1 (2025-03-09)
 * (spabas) Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session
 

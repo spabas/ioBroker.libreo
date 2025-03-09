@@ -1732,17 +1732,15 @@ class Libreo extends utils.Adapter {
 							}
 						}
 
+						//Unplugging
+						if (metric.status == "Available") {
+							await this.ClearSessionState(path);
+						}
+
 						//Session Ende
 						if (metric.currentSessionState.status == 267 || metric.currentSessionState.status == 277)
 						{
-							const pattern = path + ".currentSessionState.*";
-							const states = await this.getStatesAsync(pattern);
-
-							if (states && Object.keys(states).length > 0) {
-								Object.keys(states).forEach(async(stateId) => {
-									await this.setStateAsync(stateId, { val: null, ack: true });
-								});
-							}
+							await this.ClearSessionState(path);
 						}
 					}
 				});
@@ -1750,6 +1748,17 @@ class Libreo extends utils.Adapter {
 		}
 		catch (error) {
 			this.log.warn("Error while parsing metric data: " + error);
+		}
+	}
+
+	async ClearSessionState(path) {
+		const pattern = path + ".currentSessionState.*";
+		const states = await this.getStatesAsync(pattern);
+
+		if (states && Object.keys(states).length > 0) {
+			Object.keys(states).forEach(async(stateId) => {
+				await this.setStateAsync(stateId, { val: null, ack: true });
+			});
 		}
 	}
 }
