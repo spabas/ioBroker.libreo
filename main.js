@@ -1644,6 +1644,94 @@ class Libreo extends utils.Adapter {
 								await this.setStateAsync(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
 						}
 
+						if (metric.currentSessionState.lastMetricsData) {
+
+							const currentArray = metric.currentSessionState.lastMetricsData.current;
+							if (currentArray && currentArray.length > 0) {
+
+								for (let i = 0; i < currentArray.length; i++) {
+
+									const currentPath = path + ".currentSessionState.current_p" + (i + 1);
+									await instance.setObjectNotExistsAsync(currentPath, {
+										type: "state",
+										common: {
+											name: "current phase " + (i + 1),
+											type: "number",
+											role: "value",
+											unit: "A",
+											read: true,
+											write: false,
+										},
+										native: {},
+									});
+
+									await this.setStateAsync(currentPath, { val: currentArray[i], ack: true });
+								}
+							}
+
+							const powerArray = metric.currentSessionState.lastMetricsData.power;
+							if (powerArray && powerArray.length > 0) {
+
+								for (let i = 0; i < powerArray.length; i++) {
+
+									const currentPath = path + ".currentSessionState.power_p" + (i + 1);
+									await instance.setObjectNotExistsAsync(currentPath, {
+										type: "state",
+										common: {
+											name: "power phase " + (i + 1),
+											type: "number",
+											role: "value",
+											unit: "Wh",
+											read: true,
+											write: false,
+										},
+										native: {},
+									});
+
+									await this.setStateAsync(currentPath, { val: powerArray[i], ack: true });
+								}
+
+								await instance.setObjectNotExistsAsync(path + ".currentSessionState.power_sum", {
+									type: "state",
+									common: {
+										name: "power sum",
+										type: "number",
+										role: "value",
+										unit: "Wh",
+										read: true,
+										write: false,
+									},
+									native: {},
+								});
+
+								const powerSum = powerArray.reduce((a, b) => a + b, 0);
+								await this.setStateAsync(path + ".currentSessionState.power_sum", { val: powerSum, ack: true });
+							}
+
+							const voltageArray = metric.currentSessionState.lastMetricsData.voltage;
+							if (voltageArray && voltageArray.length > 0) {
+
+								for (let i = 0; i < voltageArray.length; i++) {
+
+									const currentPath = path + ".currentSessionState.voltage_p" + (i + 1);
+									await instance.setObjectNotExistsAsync(currentPath, {
+										type: "state",
+										common: {
+											name: "voltage phase " + (i + 1),
+											type: "number",
+											role: "value",
+											unit: "V",
+											read: true,
+											write: false,
+										},
+										native: {},
+									});
+
+									await this.setStateAsync(currentPath, { val: voltageArray[i], ack: true });
+								}
+							}
+						}
+
 						//Session Ende
 						if (metric.currentSessionState.status == 267)
 						{
