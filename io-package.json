@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.3.3",
+    "version": "1.4.0",
     "news": {
+      "1.4.0": {
+        "en": "new metrics data (current, power and voltage)",
+        "de": "neue metrikdaten (strom, leistung und spannung)",
+        "ru": "новые данные метрики (ток, мощность и напряжение)",
+        "pt": "novos dados de métricas (corrente, potência e tensão)",
+        "nl": "nieuwe metrische gegevens (stroom, vermogen en spanning)",
+        "fr": "nouvelles données de mesure (courant, puissance et tension)",
+        "it": "nuovi dati metrici (corrente, potenza e tensione)",
+        "es": "nuevos datos métricos (corriente, potencia y voltaje)",
+        "pl": "nowe dane pomiarowe (prąd, moc i napięcie)",
+        "uk": "нові метричні дані (поточна, потужність та напруга)",
+        "zh-cn": "新计量数据(电流、电源和电压)"
+      },
       "1.3.3": {
         "en": "session end now only by receiving status 267, not anymore if no currentSessionState is received",
         "de": "sitzungsende jetzt nur durch Empfang des Status 267, nicht mehr, wenn kein aktuelleSessionState erhalten wird",
@@ -80,19 +93,6 @@
         "pl": "ostatnia aktualizacja nieruchomości i niewielkie ulepszenia",
         "uk": "довгострокова нерухомість та невеликі поліпшення",
         "zh-cn": "最新财产和小改进"
-      },
-      "1.1.1": {
-        "en": "get orgs periodicly and open new web socket every 10 minutes",
-        "de": "orgs regelmäßig zu bekommen und neue netzsteckdose alle 10 minuten öffnen",
-        "ru": "получать оргс периодически и открывать новые розетки каждые 10 минут",
-        "pt": "obter orgs periodicamente e abrir novo soquete web a cada 10 minutos",
-        "nl": "krijgen orgs periodiek en open nieuwe web socket elke 10 minuten",
-        "fr": "obtenir des orgs périodiquement et ouvrir une nouvelle prise web toutes les 10 minutes",
-        "it": "ottenere org periodicamente e aprire nuova presa web ogni 10 minuti",
-        "es": "obtener orgs periódicamente y abrir nuevas tomas web cada 10 minutos",
-        "pl": "uzyskać orgs okresowo i otworzyć nowe gniazdo co 10 minut",
-        "uk": "отримайте orgs періодично і відкрийте новий веб-роз'єм кожні 10 хвилин",
-        "zh-cn": "每10分钟定期获得或打开新网络套接字"
       }
     },
     "title": "Libreo Wallbox",
