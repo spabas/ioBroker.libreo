@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "news": {
+      "1.4.2": {
+        "en": "Session-Ende durch Unplugging => Status \"Available\"",
+        "de": "Session-Ende durch Unplugging => Status \"Verfügbar\"",
+        "ru": "Session-Ende durch Unplugging => Статус «Доступно»",
+        "pt": "Sessões-Ende durch Desconectando => Estado \"Disponível\"",
+        "nl": "Session-Ende durch Unplugging => Status \"Beschikbaar\"",
+        "fr": "Session-Ende durch Débranchement => État \"Disponible\"",
+        "it": "Sessione-Ende durch Unplugging => Stato \"Disponibile\"",
+        "es": "Sesión-Ende durch Unplugging = confianza Estado \"Disponible\"",
+        "pl": "Session- Ende durch Unpluging = > Status \"dostępny\"",
+        "uk": "Сесія-Ende Дурч Непропускання => Статус \"Доступний\"",
+        "zh-cn": "会话尾声解插QQ 状态\"可侵犯\""
+      },
       "1.4.1": {
         "en": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
         "de": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
@@ -80,19 +93,6 @@
         "pl": "uzyskać zużytą energię w bieżącej sesji",
         "uk": "споживати енергію в поточному сеансі",
         "zh-cn": "获得本届会议消耗的能源"
-      },
-      "1.2.0": {
-        "en": "load initial loading sessions from begin of current year",
-        "de": "laden anfängliche ladesitzungen ab beginn des laufenden jahres",
-        "ru": "загрузка начальных сессий загрузки с начала текущего года",
-        "pt": "carregar sessões de carregamento inicial do início do ano atual",
-        "nl": "beginnende laadsessies vanaf het begin van het lopende jaar laden",
-        "fr": "charger les séances de chargement initiales à partir du début de l'année en cours",
-        "it": "caricare le sessioni iniziali di caricamento dall'inizio dell'anno corrente",
-        "es": "sesiones de carga inicial desde comienzos del año actual",
-        "pl": "załaduj początkowe sesje wczytywania od początku bieżącego roku",
-        "uk": "завантаження початкових навантажень з початку поточного року",
-        "zh-cn": "装入本年度开始的初始装入会话"
       }
     },
     "title": "Libreo Wallbox",
