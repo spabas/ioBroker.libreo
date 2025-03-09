@@ -1733,7 +1733,7 @@ class Libreo extends utils.Adapter {
 						}
 
 						//Session Ende
-						if (metric.currentSessionState.status == 267)
+						if (metric.currentSessionState.status == 267 || metric.currentSessionState.status == 277)
 						{
 							const pattern = path + ".currentSessionState.*";
 							const states = await this.getStatesAsync(pattern);
