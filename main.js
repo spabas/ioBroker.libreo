@@ -1732,16 +1732,16 @@ class Libreo extends utils.Adapter {
 							}
 						}
 
-						//Unplugging
-						if (metric.status == "Available") {
-							await this.ClearSessionState(path);
-						}
-
 						//Session Ende
 						if (metric.currentSessionState.status == 267 || metric.currentSessionState.status == 277)
 						{
 							await this.ClearSessionState(path);
 						}
+					}
+
+					//Unplugging
+					if (metric.status == "Available") {
+						await this.ClearSessionState(path);
 					}
 				});
 			}
