@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) Lib update
+
 ### 1.4.3 (2025-03-09)
 * (spabas) Session-Ende durch Unplugging => Status "Available"
 
