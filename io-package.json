@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "news": {
+      "1.4.4": {
+        "en": "Lib update",
+        "de": "Aktualisierung von Bibliotheken",
+        "ru": "Обновление Lib",
+        "pt": "Atualização da Lib",
+        "nl": "Lib update",
+        "fr": "Mise à jour Lib",
+        "it": "Aggiornamento Lib",
+        "es": "Actualización de Lib",
+        "pl": "Aktualizacja Lib",
+        "uk": "Оновлення Lib",
+        "zh-cn": "Lib 更新"
+      },
       "1.4.3": {
         "en": "Session-Ende durch Unplugging => Status \"Available\"",
         "de": "Session-Ende durch Unplugging => Status \"Verfügbar\"",
@@ -80,19 +93,6 @@
         "pl": "aktualizacja logo",
         "uk": "оновлення логотипу",
         "zh-cn": "标志更新"
-      },
-      "1.3.1": {
-        "en": "don't clear current session if recieving charging state without currentSessionState",
-        "de": "die aktuelle Sitzung nicht löschen, wenn der Ladezustand ohne Strom zurückgegeben wirdSessionState",
-        "ru": "не проясняйте текущую сессию, если восстановление зарядного состояния без текущего состояния",
-        "pt": "não limpar a sessão atual se recieving estado de carregamento sem atualSessionState",
-        "nl": "don't clear huidige sessie als het ontvangen van oplaadstatus zonder huidigeSessionState",
-        "fr": "ne pas effacer la session actuelle si la réception de l'état de charge sans courantSessionState",
-        "it": "non cancellare la sessione corrente se ricreare lo stato di carica senza correnteSessionState",
-        "es": "no despejar la sesión actual si recieve estado de carga sin el actualSessionState",
-        "pl": "nie oczyszczaj bieżącej sesji, jeśli stan pobierania opłat bez currentSessionState",
-        "uk": "не ясно поточного сеансу, якщо відредагувати стан зарядки без поточного стану",
-        "zh-cn": "如果没有当前会议状态, 则不清除当前会话"
       }
     },
     "title": "Libreo Wallbox",
