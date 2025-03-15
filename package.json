@@ -22,8 +22,8 @@
     "node": ">= 18"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.0.4",
-    "axios": "^1.7.2",
+    "@iobroker/adapter-core": "github:iobroker/adapter-core",
+    "axios": "^1.8.3",
     "axios-cookiejar-support": "^5.0.2",
     "cheerio": "^1.0.0-rc.12",
     "circular-json": "^0.5.9",
