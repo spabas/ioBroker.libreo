@@ -9,7 +9,7 @@
 const utils = require("@iobroker/adapter-core");
 
 // Load your modules here, e.g.:
-const axios = require("axios");
+const axios = require("axios").default;
 const cheerio = require("cheerio");
 const { wrapper } = require("axios-cookiejar-support");
 const tough = require("tough-cookie");
