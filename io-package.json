@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.4",
+    "version": "1.4.5",
     "news": {
+      "1.4.5": {
+        "en": "Lib update",
+        "de": "Aktualisierung von Bibliotheken",
+        "ru": "Обновление Lib",
+        "pt": "Atualização da Lib",
+        "nl": "Lib update",
+        "fr": "Mise à jour Lib",
+        "it": "Aggiornamento Lib",
+        "es": "Actualización de Lib",
+        "pl": "Aktualizacja Lib",
+        "uk": "Оновлення Lib",
+        "zh-cn": "Lib 更新"
+      },
       "1.4.4": {
         "en": "Lib update",
         "de": "Aktualisierung von Bibliotheken",
@@ -80,19 +93,6 @@
         "pl": "sesja kończy się teraz tylko przez otrzymanie statusu 267, już nie, jeśli nie ma currentSessionState",
         "uk": "закінчення сеансу тепер тільки шляхом отримання статусу 267, не більше, якщо немає струму",
         "zh-cn": "届会现在仅以获得第267次地位结束,如果没有收到当前的届会状态,则不再有"
-      },
-      "1.3.2": {
-        "en": "logo update",
-        "de": "logo-update",
-        "ru": "обновления",
-        "pt": "atualização do logotipo",
-        "nl": "logo bijwerken",
-        "fr": "mise à jour du logo",
-        "it": "logo aggiornamento",
-        "es": "actualizaciones",
-        "pl": "aktualizacja logo",
-        "uk": "оновлення логотипу",
-        "zh-cn": "标志更新"
       }
     },
     "title": "Libreo Wallbox",
