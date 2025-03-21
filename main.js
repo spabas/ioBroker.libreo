@@ -466,7 +466,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("users." + user.id + ".given_name", { val: user.firstName, ack: true });
+					await this.setState("users." + user.id + ".given_name", { val: user.firstName, ack: true });
 
 					await this.setObjectNotExistsAsync("users." + user.id + ".family_name", {
 						type: "state",
@@ -479,7 +479,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("users." + user.id + ".family_name", { val: user.lastName, ack: true });
+					await this.setState("users." + user.id + ".family_name", { val: user.lastName, ack: true });
 
 					await this.setObjectNotExistsAsync("users." + user.id + ".roleId", {
 						type: "state",
@@ -492,7 +492,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("users." + user.id + ".roleId", { val: user.roleId, ack: true });
+					await this.setState("users." + user.id + ".roleId", { val: user.roleId, ack: true });
 				});
 
 			}
@@ -579,7 +579,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".serialNumber", { val: station.serialNumber, ack: true });
+					await this.setState(path + "." + station.id + ".serialNumber", { val: station.serialNumber, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".model", {
 						type: "state",
@@ -592,7 +592,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".model", { val: station.model, ack: true });
+					await this.setState(path + "." + station.id + ".model", { val: station.model, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".macAddress", {
 						type: "state",
@@ -605,7 +605,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".macAddress", { val: station.macAddress, ack: true });
+					await this.setState(path + "." + station.id + ".macAddress", { val: station.macAddress, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".firmwareVersion", {
 						type: "state",
@@ -618,7 +618,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".firmwareVersion", { val: station.firmwareVersion, ack: true });
+					await this.setState(path + "." + station.id + ".firmwareVersion", { val: station.firmwareVersion, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".latitude", {
 						type: "state",
@@ -631,7 +631,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".latitude", { val: station.latitude, ack: true });
+					await this.setState(path + "." + station.id + ".latitude", { val: station.latitude, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".longitude", {
 						type: "state",
@@ -644,7 +644,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".longitude", { val: station.longitude, ack: true });
+					await this.setState(path + "." + station.id + ".longitude", { val: station.longitude, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".mainboardBootloaderVersion", {
 						type: "state",
@@ -657,7 +657,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".mainboardBootloaderVersion", { val: station.mainboardBootloaderVersion, ack: true });
+					await this.setState(path + "." + station.id + ".mainboardBootloaderVersion", { val: station.mainboardBootloaderVersion, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".mainboardFirmwareVersion", {
 						type: "state",
@@ -670,7 +670,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".mainboardFirmwareVersion", { val: station.mainboardFirmwareVersion, ack: true });
+					await this.setState(path + "." + station.id + ".mainboardFirmwareVersion", { val: station.mainboardFirmwareVersion, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".mainboardHardwareRevision", {
 						type: "state",
@@ -683,7 +683,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".mainboardHardwareRevision", { val: station.mainboardHardwareRevision, ack: true });
+					await this.setState(path + "." + station.id + ".mainboardHardwareRevision", { val: station.mainboardHardwareRevision, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".latestOperationMode", {
 						type: "state",
@@ -696,7 +696,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".latestOperationMode", { val: station.latestOperationMode, ack: true });
+					await this.setState(path + "." + station.id + ".latestOperationMode", { val: station.latestOperationMode, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".publicKey", {
 						type: "state",
@@ -709,7 +709,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".publicKey", { val: station.publicKey, ack: true });
+					await this.setState(path + "." + station.id + ".publicKey", { val: station.publicKey, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".connectivity", {
 						type: "state",
@@ -722,7 +722,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".connectivity", { val: station.connectivity, ack: true });
+					await this.setState(path + "." + station.id + ".connectivity", { val: station.connectivity, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".creationDate", {
 						type: "state",
@@ -735,7 +735,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".creationDate", { val: station.creationDate, ack: true });
+					await this.setState(path + "." + station.id + ".creationDate", { val: station.creationDate, ack: true });
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".modificationDate", {
 						type: "state",
@@ -748,7 +748,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + "." + station.id + ".modificationDate", { val: station.modificationDate, ack: true });
+					await this.setState(path + "." + station.id + ".modificationDate", { val: station.modificationDate, ack: true });
 
 
 					await that.setObjectNotExistsAsync(path + "." + station.id + ".chargingStart", {
@@ -924,7 +924,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".given_name", { val: userData.given_name, ack: true });
+				await this.setState("users." + userData.sub + ".given_name", { val: userData.given_name, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".family_name", {
 					type: "state",
@@ -937,7 +937,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".family_name", { val: userData.family_name, ack: true });
+				await this.setState("users." + userData.sub + ".family_name", { val: userData.family_name, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".activeOrg", {
 					type: "state",
@@ -950,7 +950,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".activeOrg", { val: userData.activeOrg, ack: true });
+				await this.setState("users." + userData.sub + ".activeOrg", { val: userData.activeOrg, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".access_token", {
 					type: "state",
@@ -963,7 +963,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".access_token", { val: userData.access_token, ack: true });
+				await this.setState("users." + userData.sub + ".access_token", { val: userData.access_token, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".refresh_token", {
 					type: "state",
@@ -976,7 +976,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".refresh_token", { val: userData.refresh_token, ack: true });
+				await this.setState("users." + userData.sub + ".refresh_token", { val: userData.refresh_token, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".expires_at", {
 					type: "state",
@@ -989,7 +989,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".expires_at", { val: userData.expires_at, ack: true });
+				await this.setState("users." + userData.sub + ".expires_at", { val: userData.expires_at, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".locale", {
 					type: "state",
@@ -1002,7 +1002,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".locale", { val: userData.locale, ack: true });
+				await this.setState("users." + userData.sub + ".locale", { val: userData.locale, ack: true });
 
 				await this.setObjectNotExistsAsync("users." + userData.sub + ".permissions", {
 					type: "state",
@@ -1015,7 +1015,7 @@ class Libreo extends utils.Adapter {
 					},
 					native: {},
 				});
-				await this.setStateAsync("users." + userData.sub + ".permissions", { val: JSON.stringify(userData.permissions), ack: true });
+				await this.setState("users." + userData.sub + ".permissions", { val: JSON.stringify(userData.permissions), ack: true });
 
 				return true;
 
@@ -1084,7 +1084,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".id", { val: session.id, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".id", { val: session.id, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStationId", {
 						type: "state",
@@ -1097,7 +1097,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStationId", { val: session.chargingStationId, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".chargingStationId", { val: session.chargingStationId, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStationName", {
 						type: "state",
@@ -1110,7 +1110,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStationName", { val: session.chargingStationName, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".chargingStationName", { val: session.chargingStationName, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".chargingStatus", {
 						type: "state",
@@ -1123,7 +1123,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".chargingStatus", { val: session.chargingStatus, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".chargingStatus", { val: session.chargingStatus, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".location", {
 						type: "state",
@@ -1136,7 +1136,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".location", { val: session.location, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".location", { val: session.location, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".organizationPath", {
 						type: "state",
@@ -1149,7 +1149,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".organizationPath", { val: session.organizationPath, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".organizationPath", { val: session.organizationPath, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionStarted", {
 						type: "state",
@@ -1162,7 +1162,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".sessionStarted", { val: session.sessionStarted, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".sessionStarted", { val: session.sessionStarted, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionCompleted", {
 						type: "state",
@@ -1175,7 +1175,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".sessionCompleted", { val: session.sessionCompleted, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".sessionCompleted", { val: session.sessionCompleted, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionDuration", {
 						type: "state",
@@ -1189,7 +1189,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".sessionDuration", { val: session.sessionDuration, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".sessionDuration", { val: session.sessionDuration, ack: true });
 
 					await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".sessionEnergyAmount", {
 						type: "state",
@@ -1203,7 +1203,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync("chargingsessions." + sessionId + ".sessionEnergyAmount", { val: session.sessionEnergyAmount, ack: true });
+					await this.setState("chargingsessions." + sessionId + ".sessionEnergyAmount", { val: session.sessionEnergyAmount, ack: true });
 
 					if (session.user) {
 
@@ -1218,7 +1218,7 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".id", { val: session.user.id, ack: true });
+						await this.setState("chargingsessions." + sessionId + ".user" + ".id", { val: session.user.id, ack: true });
 
 						await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".user" + ".firstName", {
 							type: "state",
@@ -1231,7 +1231,7 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".firstName", { val: session.user.firstName, ack: true });
+						await this.setState("chargingsessions." + sessionId + ".user" + ".firstName", { val: session.user.firstName, ack: true });
 
 						await this.setObjectNotExistsAsync("chargingsessions." + sessionId + ".user" + ".lastName", {
 							type: "state",
@@ -1244,7 +1244,7 @@ class Libreo extends utils.Adapter {
 							},
 							native: {},
 						});
-						await this.setStateAsync("chargingsessions." + sessionId + ".user" + ".lastName", { val: session.user.lastName, ack: true });
+						await this.setState("chargingsessions." + sessionId + ".user" + ".lastName", { val: session.user.lastName, ack: true });
 					}
 				});
 
@@ -1407,7 +1407,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".last_updated", { val: new Date().getTime(), ack: true });
+					await this.setState(path + ".last_updated", { val: new Date().getTime(), ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".online", {
 						type: "state",
@@ -1420,7 +1420,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".online", { val: metric.online, ack: true });
+					await this.setState(path + ".online", { val: metric.online, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".available", {
 						type: "state",
@@ -1433,7 +1433,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".available", { val: metric.available, ack: true });
+					await this.setState(path + ".available", { val: metric.available, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".charging", {
 						type: "state",
@@ -1446,7 +1446,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".charging", { val: metric.charging, ack: true });
+					await this.setState(path + ".charging", { val: metric.charging, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".simpleCharge", {
 						type: "state",
@@ -1459,7 +1459,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".simpleCharge", { val: metric.simpleCharge, ack: true });
+					await this.setState(path + ".simpleCharge", { val: metric.simpleCharge, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".plugged", {
 						type: "state",
@@ -1472,7 +1472,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".plugged", { val: metric.plugged, ack: true });
+					await this.setState(path + ".plugged", { val: metric.plugged, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".maxCurrent", {
 						type: "state",
@@ -1486,7 +1486,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".maxCurrent", { val: metric.maxCurrent, ack: true });
+					await this.setState(path + ".maxCurrent", { val: metric.maxCurrent, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".dynamicCurrent", {
 						type: "state",
@@ -1500,7 +1500,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".dynamicCurrent", { val: metric.dynamicCurrent, ack: true });
+					await this.setState(path + ".dynamicCurrent", { val: metric.dynamicCurrent, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".chargingMode", {
 						type: "state",
@@ -1513,7 +1513,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".chargingMode", { val: metric.chargingMode, ack: true });
+					await this.setState(path + ".chargingMode", { val: metric.chargingMode, ack: true });
 
 					await instance.setObjectNotExistsAsync(path + ".status", {
 						type: "state",
@@ -1526,7 +1526,7 @@ class Libreo extends utils.Adapter {
 						},
 						native: {},
 					});
-					await this.setStateAsync(path + ".status", { val: metric.status, ack: true });
+					await this.setState(path + ".status", { val: metric.status, ack: true });
 
 					if (metric.currentSessionState) {
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState", {
@@ -1550,7 +1550,7 @@ class Libreo extends utils.Adapter {
 						});
 
 						if (metric.currentSessionState.startTime)
-							await this.setStateAsync(path + ".currentSessionState.startTime", { val: metric.currentSessionState.startTime, ack: true });
+							await this.setState(path + ".currentSessionState.startTime", { val: metric.currentSessionState.startTime, ack: true });
 
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.status", {
 							type: "state",
@@ -1565,7 +1565,7 @@ class Libreo extends utils.Adapter {
 						});
 
 						if (metric.currentSessionState.status)
-							await this.setStateAsync(path + ".currentSessionState.status", { val: metric.currentSessionState.status, ack: true });
+							await this.setState(path + ".currentSessionState.status", { val: metric.currentSessionState.status, ack: true });
 
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.consumedEnergy", {
 							type: "state",
@@ -1580,7 +1580,7 @@ class Libreo extends utils.Adapter {
 						});
 
 						if (metric.currentSessionState.consumedEnergy)
-							await this.setStateAsync(path + ".currentSessionState.consumedEnergy", { val: metric.currentSessionState.consumedEnergy, ack: true });
+							await this.setState(path + ".currentSessionState.consumedEnergy", { val: metric.currentSessionState.consumedEnergy, ack: true });
 
 						await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger", {
 							type: "state",
@@ -1595,7 +1595,7 @@ class Libreo extends utils.Adapter {
 						});
 
 						if (metric.currentSessionState.trigger)
-							await this.setStateAsync(path + ".currentSessionState.trigger", { val: metric.currentSessionState.trigger, ack: true });
+							await this.setState(path + ".currentSessionState.trigger", { val: metric.currentSessionState.trigger, ack: true });
 
 						if (metric.currentSessionState.triggerUser) {
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_firstName", {
@@ -1611,7 +1611,7 @@ class Libreo extends utils.Adapter {
 							});
 
 							if (metric.currentSessionState.triggerUser.firstName)
-								await this.setStateAsync(path + ".currentSessionState.trigger_firstName", { val: metric.currentSessionState.triggerUser.firstName, ack: true });
+								await this.setState(path + ".currentSessionState.trigger_firstName", { val: metric.currentSessionState.triggerUser.firstName, ack: true });
 
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_lastName", {
 								type: "state",
@@ -1626,7 +1626,7 @@ class Libreo extends utils.Adapter {
 							});
 
 							if (metric.currentSessionState.triggerUser.lastName)
-								await this.setStateAsync(path + ".currentSessionState.trigger_lastName", { val: metric.currentSessionState.triggerUser.lastName, ack: true });
+								await this.setState(path + ".currentSessionState.trigger_lastName", { val: metric.currentSessionState.triggerUser.lastName, ack: true });
 
 							await instance.setObjectNotExistsAsync(path + ".currentSessionState.trigger_originalUser", {
 								type: "state",
@@ -1641,7 +1641,7 @@ class Libreo extends utils.Adapter {
 							});
 
 							if (metric.currentSessionState.triggerUser.originalUser)
-								await this.setStateAsync(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
+								await this.setState(path + ".currentSessionState.trigger_originalUser", { val: metric.currentSessionState.triggerUser.originalUser, ack: true });
 						}
 
 						if (metric.currentSessionState.lastMetricsData) {
@@ -1665,7 +1665,7 @@ class Libreo extends utils.Adapter {
 										native: {},
 									});
 
-									await this.setStateAsync(currentPath, { val: currentArray[i], ack: true });
+									await this.setState(currentPath, { val: currentArray[i], ack: true });
 								}
 							}
 
@@ -1688,7 +1688,7 @@ class Libreo extends utils.Adapter {
 										native: {},
 									});
 
-									await this.setStateAsync(currentPath, { val: powerArray[i], ack: true });
+									await this.setState(currentPath, { val: powerArray[i], ack: true });
 								}
 
 								await instance.setObjectNotExistsAsync(path + ".currentSessionState.power_sum", {
@@ -1705,7 +1705,7 @@ class Libreo extends utils.Adapter {
 								});
 
 								const powerSum = powerArray.reduce((a, b) => a + b, 0);
-								await this.setStateAsync(path + ".currentSessionState.power_sum", { val: powerSum, ack: true });
+								await this.setState(path + ".currentSessionState.power_sum", { val: powerSum, ack: true });
 							}
 
 							const voltageArray = metric.currentSessionState.lastMetricsData.voltage;
@@ -1727,13 +1727,13 @@ class Libreo extends utils.Adapter {
 										native: {},
 									});
 
-									await this.setStateAsync(currentPath, { val: voltageArray[i], ack: true });
+									await this.setState(currentPath, { val: voltageArray[i], ack: true });
 								}
 							}
 						}
 
 						//Session Ende
-						if (metric.currentSessionState.status == 267 || metric.currentSessionState.status == 277)
+						if (metric.currentSessionState.status == 267 || metric.currentSessionState.status == 276 || metric.currentSessionState.status == 277)
 						{
 							await this.ClearSessionState(path);
 						}
@@ -1741,6 +1741,9 @@ class Libreo extends utils.Adapter {
 
 					//Unplugging
 					if (metric.status == "Available") {
+						await this.ClearSessionState(path);
+					}
+					else if (metric.status == "Occupied") {
 						await this.ClearSessionState(path);
 					}
 				});
@@ -1752,14 +1755,23 @@ class Libreo extends utils.Adapter {
 	}
 
 	async ClearSessionState(path) {
-		const pattern = path + ".currentSessionState.*";
-		const states = await this.getStatesAsync(pattern);
 
-		if (states && Object.keys(states).length > 0) {
-			Object.keys(states).forEach(async(stateId) => {
-				await this.setStateAsync(stateId, { val: null, ack: true });
-			});
-		}
+		await this.setState(path + ".currentSessionState.consumedEnergy", 0);
+		await this.setState(path + ".currentSessionState.current_p1", 0);
+		await this.setState(path + ".currentSessionState.current_p2", 0);
+		await this.setState(path + ".currentSessionState.current_p3", 0);
+		await this.setState(path + ".currentSessionState.power_p1", 0);
+		await this.setState(path + ".currentSessionState.power_p2", 0);
+		await this.setState(path + ".currentSessionState.power_p3", 0);
+		await this.setState(path + ".currentSessionState.power_sum", 0);
+		await this.setState(path + ".currentSessionState.voltage_p1", 0);
+		await this.setState(path + ".currentSessionState.voltage_p2", 0);
+		await this.setState(path + ".currentSessionState.voltage_p3", 0);
+		await this.setState(path + ".currentSessionState.startTime", null);
+		await this.setState(path + ".currentSessionState.trigger", null);
+		await this.setState(path + ".currentSessionState.trigger_firstName", null);
+		await this.setState(path + ".currentSessionState.trigger_lastName", null);
+		await this.setState(path + ".currentSessionState.trigger_originalName", null);
 	}
 }
 
