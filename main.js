@@ -1756,22 +1756,22 @@ class Libreo extends utils.Adapter {
 
 	async ClearSessionState(path) {
 
-		await this.setState(path + ".currentSessionState.consumedEnergy", 0);
-		await this.setState(path + ".currentSessionState.current_p1", 0);
-		await this.setState(path + ".currentSessionState.current_p2", 0);
-		await this.setState(path + ".currentSessionState.current_p3", 0);
-		await this.setState(path + ".currentSessionState.power_p1", 0);
-		await this.setState(path + ".currentSessionState.power_p2", 0);
-		await this.setState(path + ".currentSessionState.power_p3", 0);
-		await this.setState(path + ".currentSessionState.power_sum", 0);
-		await this.setState(path + ".currentSessionState.voltage_p1", 0);
-		await this.setState(path + ".currentSessionState.voltage_p2", 0);
-		await this.setState(path + ".currentSessionState.voltage_p3", 0);
-		await this.setState(path + ".currentSessionState.startTime", null);
-		await this.setState(path + ".currentSessionState.trigger", null);
-		await this.setState(path + ".currentSessionState.trigger_firstName", null);
-		await this.setState(path + ".currentSessionState.trigger_lastName", null);
-		await this.setState(path + ".currentSessionState.trigger_originalName", null);
+		await this.setState(path + ".currentSessionState.consumedEnergy", 0, true);
+		await this.setState(path + ".currentSessionState.current_p1", 0, true);
+		await this.setState(path + ".currentSessionState.current_p2", 0, true);
+		await this.setState(path + ".currentSessionState.current_p3", 0, true);
+		await this.setState(path + ".currentSessionState.power_p1", 0, true);
+		await this.setState(path + ".currentSessionState.power_p2", 0, true);
+		await this.setState(path + ".currentSessionState.power_p3", 0, true);
+		await this.setState(path + ".currentSessionState.power_sum", 0, true);
+		await this.setState(path + ".currentSessionState.voltage_p1", 0, true);
+		await this.setState(path + ".currentSessionState.voltage_p2", 0, true);
+		await this.setState(path + ".currentSessionState.voltage_p3", 0, true);
+		await this.setState(path + ".currentSessionState.startTime", null, true);
+		await this.setState(path + ".currentSessionState.trigger", null, true);
+		await this.setState(path + ".currentSessionState.trigger_firstName", null, true);
+		await this.setState(path + ".currentSessionState.trigger_lastName", null, true);
+		await this.setState(path + ".currentSessionState.trigger_originalUser", null, true);
 	}
 }
 
