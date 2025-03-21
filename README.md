@@ -19,8 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.4.6 (2025-03-21)
 * (spabas) Explites Löschen der Sesstion-States bei Session Ende
 
 ### 1.4.5 (2025-03-16)
