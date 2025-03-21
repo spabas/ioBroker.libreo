@@ -19,8 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.4.7 (2025-03-21)
 * (spabas) ack flags
 
 ### 1.4.6 (2025-03-21)

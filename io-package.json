@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "news": {
+      "1.4.7": {
+        "en": "ack flags",
+        "de": "ack flags",
+        "ru": "флаги",
+        "pt": "bandeiras de ack",
+        "nl": "ackvlaggen",
+        "fr": "drapeaux ack",
+        "it": "ack flags",
+        "es": "banderas de ack",
+        "pl": "flagi",
+        "uk": "ack прапори",
+        "zh-cn": "标记"
+      },
       "1.4.6": {
         "en": "Explites Löschen der Sesstion-States bei Session Ende",
         "de": "Löschen der Sesstion-States bei Session Ende",
@@ -80,19 +93,6 @@
         "pl": "Session- Ende auch bei Status 277 (beendet, aber noch angesteckt?), damit Löschen der aktiven Session",
         "uk": "Сесія-Ende auch bei Статус 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
         "zh-cn": "Session-Ende auch bei status 277 (beendet, aber noch angesteckt ?), Damit Löschen der aktiven 会话 "
-      },
-      "1.4.0": {
-        "en": "new metrics data (current, power and voltage)",
-        "de": "neue metrikdaten (strom, leistung und spannung)",
-        "ru": "новые данные метрики (ток, мощность и напряжение)",
-        "pt": "novos dados de métricas (corrente, potência e tensão)",
-        "nl": "nieuwe metrische gegevens (stroom, vermogen en spanning)",
-        "fr": "nouvelles données de mesure (courant, puissance et tension)",
-        "it": "nuovi dati metrici (corrente, potenza e tensione)",
-        "es": "nuevos datos métricos (corriente, potencia y voltaje)",
-        "pl": "nowe dane pomiarowe (prąd, moc i napięcie)",
-        "uk": "нові метричні дані (поточна, потужність та напруга)",
-        "zh-cn": "新计量数据(电流、电源和电压)"
       }
     },
     "title": "Libreo Wallbox",
