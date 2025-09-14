@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.7",
+    "version": "1.4.8",
     "news": {
+      "1.4.8": {
+        "en": "Lib update",
+        "de": "Bibliotheksaktualisierung",
+        "ru": "Обновление библиотеки",
+        "pt": "Atualização de biblioteca",
+        "nl": "Bibliotheek bijgewerkt",
+        "fr": "Mise à jour de la bibliothèque",
+        "it": "Aggiornamento della libreria",
+        "es": "Actualización de librería",
+        "pl": "Aktualizacja biblioteki",
+        "uk": "Оновлення бібліотек.",
+        "zh-cn": "库更新"
+      },
       "1.4.7": {
         "en": "ack flags",
         "de": "ack flags",
@@ -80,19 +93,6 @@
         "pl": "Session- Ende durch Unpluging = > Status \"dostępny\"",
         "uk": "Сесія-Ende Дурч Непропускання => Статус \"Доступний\"",
         "zh-cn": "会话尾声解插QQ 状态\"可侵犯\""
-      },
-      "1.4.1": {
-        "en": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "de": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "ru": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "pt": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "nl": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "fr": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "it": "Sessione-Ende auch bei Stato 277 (fedele, aber noch angesteckt ?), damit Löschen der aktiven Sessione",
-        "es": "Session-Ende auch bei Status 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "pl": "Session- Ende auch bei Status 277 (beendet, aber noch angesteckt?), damit Löschen der aktiven Session",
-        "uk": "Сесія-Ende auch bei Статус 277 (beendet, aber noch angesteckt ?), damit Löschen der aktiven Session",
-        "zh-cn": "Session-Ende auch bei status 277 (beendet, aber noch angesteckt ?), Damit Löschen der aktiven 会话 "
       }
     },
     "title": "Libreo Wallbox",
