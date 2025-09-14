@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.4.8",
+    "version": "1.5.0",
     "news": {
+      "1.5.0": {
+        "en": "Migration to node 20.x",
+        "de": "Migration zu Node 20.x",
+        "ru": "Миграция на node 20.x",
+        "pt": "Migração para o node 20.x",
+        "nl": "Migratie naar node 20.x",
+        "fr": "Migration vers node 20.x",
+        "it": "Migrazione a node 20.x",
+        "es": "Migración a node 20.x",
+        "pl": "Migracja do wersji node 20.x",
+        "uk": "Міграція на node 20.x",
+        "zh-cn": "迁移至 Node 20.x"
+      },
       "1.4.8": {
         "en": "Lib update",
         "de": "Bibliotheksaktualisierung",
@@ -69,19 +82,6 @@
         "zh-cn": "Lib 更新"
       },
       "1.4.3": {
-        "en": "Session-Ende durch Unplugging => Status \"Available\"",
-        "de": "Session-Ende durch Unplugging => Status \"Verfügbar\"",
-        "ru": "Session-Ende durch Unplugging => Статус «Доступно»",
-        "pt": "Sessões-Ende durch Desconectando => Estado \"Disponível\"",
-        "nl": "Session-Ende durch Unplugging => Status \"Beschikbaar\"",
-        "fr": "Session-Ende durch Débranchement => État \"Disponible\"",
-        "it": "Sessione-Ende durch Unplugging => Stato \"Disponibile\"",
-        "es": "Sesión-Ende durch Unplugging = confianza Estado \"Disponible\"",
-        "pl": "Session- Ende durch Unpluging = > Status \"dostępny\"",
-        "uk": "Сесія-Ende Дурч Непропускання => Статус \"Доступний\"",
-        "zh-cn": "会话尾声解插QQ 状态\"可侵犯\""
-      },
-      "1.4.2": {
         "en": "Session-Ende durch Unplugging => Status \"Available\"",
         "de": "Session-Ende durch Unplugging => Status \"Verfügbar\"",
         "ru": "Session-Ende durch Unplugging => Статус «Доступно»",
