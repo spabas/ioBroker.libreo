@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) Migration to node 20.x
+
 ### 1.4.8 (2025-09-14)
 * (spabas) Lib update
 
