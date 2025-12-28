@@ -1737,6 +1737,15 @@ class Libreo extends utils.Adapter {
 						{
 							await this.ClearSessionState(path);
 						}
+
+						//Session Fortsetzen nach kurzer Unterbrechung (Es wurde zuvor Charing=false und Status=Occupied gesschickt)
+						//Dadurch haben wir den Session-State und den ladenden Benutzer geleert,
+						//Wir starten den Stream neu, um das wieder zu bekommen
+						if (metric.currentSessionState.status == 266)
+						{
+							this.log.info("Restart web socket: Status 266 received.");
+							await this.StartWebSocket(org, path);
+						}
 					}
 
 					//Unplugging
