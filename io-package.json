@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.5.1",
+    "version": "1.6.0",
     "news": {
+      "1.6.0": {
+        "en": "Lib update / audit fix",
+        "de": "Lib update / audit fix",
+        "ru": "Обновление Lib / исправление аудита",
+        "pt": "Atualização da Lib / correção de auditoria",
+        "nl": "Lib update / audit fix",
+        "fr": "Lib mise à jour / correction d'audit",
+        "it": "Aggiornamento Lib / correzione di audit",
+        "es": "Actualización de Lib / corrección de auditoría",
+        "pl": "Lib update / audyt fix",
+        "uk": "Оновлення Lib / аудит виправити",
+        "zh-cn": "Lib 更新/审计修正"
+      },
       "1.5.1": {
         "en": "Reconnect to stream if receiving session state 266 (continue charging)",
         "de": "Wiederzuschalten, wenn der Sitzungszustand 266 empfangen wird (Weiterladung)",
@@ -69,19 +82,6 @@
         "zh-cn": "Löschen der Sesstion- States bei session Ende 结束语"
       },
       "1.4.5": {
-        "en": "Lib update",
-        "de": "Aktualisierung von Bibliotheken",
-        "ru": "Обновление Lib",
-        "pt": "Atualização da Lib",
-        "nl": "Lib update",
-        "fr": "Mise à jour Lib",
-        "it": "Aggiornamento Lib",
-        "es": "Actualización de Lib",
-        "pl": "Aktualizacja Lib",
-        "uk": "Оновлення Lib",
-        "zh-cn": "Lib 更新"
-      },
-      "1.4.4": {
         "en": "Lib update",
         "de": "Aktualisierung von Bibliotheken",
         "ru": "Обновление Lib",
