@@ -19,6 +19,10 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) Lib update / audit fix
+
 ### 1.5.1 (2025-12-28)
 * (spabas) Reconnect to stream if receiving session state 266 (continue charging)
 
