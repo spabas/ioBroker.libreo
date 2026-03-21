@@ -77,5 +77,10 @@
   "bugs": {
     "url": "https://github.com/spabas/ioBroker.libreo/issues"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "overrides": {
+    "serialize-javascript": ">=7.0.3",
+    "diff": ">=8.0.3",
+    "http-proxy-agent": ">=7.0.0"
+  }
 }
