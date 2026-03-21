@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "news": {
+      "1.6.2": {
+        "en": "Lib update / audit fix",
+        "de": "Lib update / audit fix",
+        "ru": "Обновление Lib / исправление аудита",
+        "pt": "Atualização da Lib / correção de auditoria",
+        "nl": "Lib update / audit fix",
+        "fr": "Lib mise à jour / correction d'audit",
+        "it": "Aggiornamento Lib / correzione di audit",
+        "es": "Actualización de Lib / corrección de auditoría",
+        "pl": "Lib update / audyt fix",
+        "uk": "Оновлення Lib / аудит виправити",
+        "zh-cn": "Lib 更新/审计修正"
+      },
       "1.6.1": {
         "en": "Lib update / audit fix",
         "de": "Lib update / audit fix",
@@ -80,19 +93,6 @@
         "pl": "flagi",
         "uk": "ack прапори",
         "zh-cn": "标记"
-      },
-      "1.4.6": {
-        "en": "Explites Löschen der Sesstion-States bei Session Ende",
-        "de": "Löschen der Sesstion-States bei Session Ende",
-        "ru": "Обсуждение Löschen der Sesstion-States bei Session Ende",
-        "pt": "Explites Löschen der Sestion-States bei Session Ende",
-        "nl": "Explites Löschen der Session-States bei Session Ende",
-        "fr": "Löschen der Sesstion-States bei Session Ende",
-        "it": "Explites Löschen der Sesstion-States bei Session Ende",
-        "es": "Explites Löschen der Sesstion-States bei Session Ende",
-        "pl": "Exploites Löschen der Session- States bei Session Ende",
-        "uk": "Explites Löschen der Sesstion-States bei Session Ende",
-        "zh-cn": "Löschen der Sesstion- States bei session Ende 结束语"
       }
     },
     "title": "Libreo Wallbox",
