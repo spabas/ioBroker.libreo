@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "news": {
+      "1.6.3": {
+        "en": "Fix CVE-2026-40175: Update axios to 1.15.0",
+        "de": "Fix CVE-2026-40175: Update axios zu 1.15.0",
+        "ru": "Исправление CVE-2026-40175: обновление до 1.15.0",
+        "pt": "Corrigir CVE-2026-40175: Atualizar axios para 1.15.0",
+        "nl": "Fix CVE-2026-40175: Axios bijwerken naar 1,15.0",
+        "fr": "Correction CVE-2026-40175: Mettre à jour axios à 1.15.0",
+        "it": "Fix CVE-2026-40175: Axios di aggiornamento a 1.15.0",
+        "es": "Fijar CVE-2026-40175: Actualizar el eje a 1.15.0",
+        "pl": "Poprawiono CVE- 2026- 40175: Aktualizuj aksjozy do 1.15.0",
+        "uk": "Виправлення CVE-2026-40175: Update axios до 1.15.0",
+        "zh-cn": "Fix CVE-2026-40175:将轴线更新至1.15.0"
+      },
       "1.6.2": {
         "en": "Lib update / audit fix",
         "de": "Lib update / audit fix",
@@ -80,19 +93,6 @@
         "pl": "Aktualizacja biblioteki",
         "uk": "Оновлення бібліотек.",
         "zh-cn": "库更新"
-      },
-      "1.4.7": {
-        "en": "ack flags",
-        "de": "ack flags",
-        "ru": "флаги",
-        "pt": "bandeiras de ack",
-        "nl": "ackvlaggen",
-        "fr": "drapeaux ack",
-        "it": "ack flags",
-        "es": "banderas de ack",
-        "pl": "flagi",
-        "uk": "ack прапори",
-        "zh-cn": "标记"
       }
     },
     "title": "Libreo Wallbox",
