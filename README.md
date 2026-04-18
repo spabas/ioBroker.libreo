@@ -19,6 +19,9 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### 1.6.4 (2026-04-18)
+* (spabas) Fix GHSA-xq3m-2v4x-88gg: Update protobufjs to 7.5.5
+
 ### 1.6.3 (2026-04-14)
 * (spabas) Fix CVE-2026-40175: Update axios to 1.15.0
 

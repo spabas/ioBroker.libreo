@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "news": {
+      "1.6.4": {
+        "en": "Fix GHSA-xq3m-2v4x-88gg: Update protobufjs to 7.5.5",
+        "de": "Fix GHSA-xq3m-2v4x-88gg: Update protobufjs auf 7.5.5",
+        "ru": "Исправление GHSA-xq3m-2v4x-88gg: обновление protobufjs до 7.5.5",
+        "pt": "Corrigir GHSA-xq3m-2v4x-88gg: Atualizar protobufjs para 7.5.5",
+        "nl": "Fix GHSA-xq3m-2v4x-88gg: protobufjs bijwerken naar 7.5.5",
+        "fr": "Correction GHSA-xq3m-2v4x-88gg: Mettre à jour protobufjs à 7.5.5",
+        "it": "Fix GHSA-xq3m-2v4x-88gg: Aggiornamento protobufjs a 7.5.5",
+        "es": "Fijar GHSA-xq3m-2v4x-88gg: Actualizar protobufjs a 7.5.5",
+        "pl": "Poprawiono GHSA-xq3m-2v4x-88gg: Aktualizuj protobufjs do 7.5.5",
+        "uk": "Виправлення GHSA-xq3m-2v4x-88gg: Update protobufjs до 7.5.5",
+        "zh-cn": "Fix GHSA-xq3m-2v4x-88gg: 将protobufjs更新至7.5.5"
+      },
       "1.6.3": {
         "en": "Fix CVE-2026-40175: Update axios to 1.15.0",
         "de": "Fix CVE-2026-40175: Update axios zu 1.15.0",
