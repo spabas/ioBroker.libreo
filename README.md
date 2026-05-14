@@ -19,6 +19,11 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### 1.6.5 (2026-05-14)
+* (spabas) Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (also closes 6 further protobufjs advisories)
+* (spabas) Update axios to 1.16.1 (closes 13 axios advisories)
+* (spabas) Override esbuild to 0.25.x (closes GHSA-67mh-4wv8-2f99)
+
 ### 1.6.4 (2026-04-18)
 * (spabas) Fix GHSA-xq3m-2v4x-88gg: Update protobufjs to 7.5.5
 

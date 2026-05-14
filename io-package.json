@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "news": {
+      "1.6.5": {
+        "en": "Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (also closes 6 further protobufjs advisories)\nUpdate axios to 1.16.1 (closes 13 axios advisories)\nOverride esbuild to 0.25.x (closes GHSA-67mh-4wv8-2f99)",
+        "de": "Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (verschließt auch 6 weitere protobufjs Advisories)\nAxios auf 1.16.1 aktualisieren (schließt 13 Axios-Berater)\nOverride esbuild to 0.25.x (schließt GHSA-67mh-4wv8-2f99)",
+        "ru": "Исправление GHSA-66ff-xgx4-vchm: обновление протобуфей до 7,5.8 (также закрывает 6 дополнительных рекомендаций по протобуфеям)\nОбновление axios до 1.16.1 (закрывает 13 рекомендаций axios)\nОверрайд построен до 0.25.x (закрывает GHSA-67mh-4wv8-2f99)",
+        "pt": "Corrigir GHSA-66ff-xgx4-vchm: Atualizar protobufjs para 7.5.8 (também fecha mais 6 avisos protobufjs)\nAtualizar axios para 1.16.1 (fecha 13 axios)\nSubstituir esbuild para 0.25.x (fecha GHSA-67mh-4wv8-2f99)",
+        "nl": "Fix GHSA-66ff-xgx4-vchm: Update protobufjs naar 7.5.8 (sluit ook 6 verdere protobufjs adviseurs)\nBijwerken van axio's naar 1.16.1 (sluit 13 axios-adviseurs)\nOverride esbuild to 0.25.x (sluit GHSA-67mh-4wv8-2f99)",
+        "fr": "Correction du SGHA-66ff-xgx4-vchm: Mettre à jour le protobufjs à 7.5.8 (ferme également 6 autres avis protobufjs)\nMettre à jour axios à 1.16.1 (ferme 13 avis axios)\nSurpasser l'esbuilding à 0,25.x (ferme le SGHA-67mh-4wv8-2f99)",
+        "it": "Fissare GHSA-66ff-xgx4-vchm: Aggiornare protobufjs a 7.5.8 (chiude anche 6 ulteriori consulenti protobufjs)\nAxios aggiornamento a 1.16.1 (chiude 13 consulenti assi)\nOverride esbuild a 0.25.x (chiude GHSA-67mh-4wv8-2f99)",
+        "es": "Fijar GHSA-66ff-xgx4-vchm: Actualizar protobufjs a 7.5.8 (también cierra 6 nuevas asesorías protobufjs)\nActualizar axios a 1.16.1 (cerca 13 axios asesores)\nOverride esbuild to 0.25.x (closes GHSA-67mh-4wv8-2f99)",
+        "pl": "Poprawiono GHSA- 66ff- xgx4-vchm: Aktualizuj protobufjs do 7.5.8 (także zamyka 6 dalszych doradców protobufjs)\nAktualizuj aksjos do 1.16.1 (zamyka 13 aksjońskich doradców)\nOverride esbuild to 0.25.x (closes GHSA- 67mh- 4wv8- 2f99)",
+        "uk": "Виправлення GHSA-66ff-xgx4-vchm: Update protobufjs до 7.5.8 (також близько 6 подальших консультантів протобуфей)\nUpdate axios до 1.16.1 (закриває 13 консультантів осей)\nНадійшла до 0.25.x (закриває GHSA-67mh-4wv8-2f99)",
+        "zh-cn": "将 GHSA-66ff-xgx4-vchm: 更新原型bufjs至7.5.8(同时关闭另外6个原型bufjs咨询)\n将轴线更新为1.16.1(接近13条轴线建议)\n覆盖建筑到0.25.x(接近GHSA-67mh-4wv8-2f99)"
+      },
       "1.6.4": {
         "en": "Fix GHSA-xq3m-2v4x-88gg: Update protobufjs to 7.5.5",
         "de": "Fix GHSA-xq3m-2v4x-88gg: Update protobufjs auf 7.5.5",
@@ -80,32 +93,6 @@
         "pl": "Przywróć strumień, jeśli odbierasz stan sesji 266 (kontynuować ładowanie)",
         "uk": "Від'єднатися до потоку, якщо отримувати стан сеансу 266 (продовження зарядки)",
         "zh-cn": "如果接收会话状态为 266 , 则重新连接到流( 继续充电)"
-      },
-      "1.5.0": {
-        "en": "Migration to node 20.x",
-        "de": "Migration zu Node 20.x",
-        "ru": "Миграция на node 20.x",
-        "pt": "Migração para o node 20.x",
-        "nl": "Migratie naar node 20.x",
-        "fr": "Migration vers node 20.x",
-        "it": "Migrazione a node 20.x",
-        "es": "Migración a node 20.x",
-        "pl": "Migracja do wersji node 20.x",
-        "uk": "Міграція на node 20.x",
-        "zh-cn": "迁移至 Node 20.x"
-      },
-      "1.4.8": {
-        "en": "Lib update",
-        "de": "Bibliotheksaktualisierung",
-        "ru": "Обновление библиотеки",
-        "pt": "Atualização de biblioteca",
-        "nl": "Bibliotheek bijgewerkt",
-        "fr": "Mise à jour de la bibliothèque",
-        "it": "Aggiornamento della libreria",
-        "es": "Actualización de librería",
-        "pl": "Aktualizacja biblioteki",
-        "uk": "Оновлення бібліотек.",
-        "zh-cn": "库更新"
       }
     },
     "title": "Libreo Wallbox",
