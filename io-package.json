@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.5",
+    "version": "1.6.6",
     "news": {
+      "1.6.6": {
+        "en": "Fix GHSA-gv7w-rqvm-qjhr: Override esbuild to 0.28.1 (closes esbuild Deno binary integrity RCE advisory)\nUpdate ws to 8.21.0 (closes GHSA-58qx-3vcg-4xpx and GHSA-96hv-2xvq-fx4p)\nResolve transitive @grpc/grpc-js and uuid advisories via npm audit fix",
+        "de": "Fix GHSA-gv7w-rqvm-qjhr: esbuild auf 0.28.1 überschreiben (schließt esbuild Deno Binary-Integritäts-RCE-Advisory)\nws auf 8.21.0 aktualisieren (schließt GHSA-58qx-3vcg-4xpx und GHSA-96hv-2xvq-fx4p)\nTransitive @grpc/grpc-js- und uuid-Advisories per npm audit fix beheben",
+        "ru": "Исправление GHSA-gv7w-rqvm-qjhr: переопределение esbuild на 0.28.1 (закрывает уязвимость RCE целостности двоичного файла esbuild Deno)\nОбновление ws до 8.21.0 (закрывает GHSA-58qx-3vcg-4xpx и GHSA-96hv-2xvq-fx4p)\nУстранение транзитивных уязвимостей @grpc/grpc-js и uuid через npm audit fix",
+        "pt": "Corrigir GHSA-gv7w-rqvm-qjhr: Substituir esbuild para 0.28.1 (fecha o aviso RCE de integridade de binário do esbuild Deno)\nAtualizar ws para 8.21.0 (fecha GHSA-58qx-3vcg-4xpx e GHSA-96hv-2xvq-fx4p)\nResolver avisos transitivos de @grpc/grpc-js e uuid via npm audit fix",
+        "nl": "Fix GHSA-gv7w-rqvm-qjhr: esbuild overschrijven naar 0.28.1 (sluit esbuild Deno binaire integriteit RCE-advies)\nWs bijwerken naar 8.21.0 (sluit GHSA-58qx-3vcg-4xpx en GHSA-96hv-2xvq-fx4p)\nTransitieve @grpc/grpc-js- en uuid-adviezen oplossen via npm audit fix",
+        "fr": "Correction GHSA-gv7w-rqvm-qjhr : Remplacer esbuild par 0.28.1 (ferme l'avis RCE d'intégrité binaire esbuild Deno)\nMettre à jour ws vers 8.21.0 (ferme GHSA-58qx-3vcg-4xpx et GHSA-96hv-2xvq-fx4p)\nRésoudre les avis transitifs @grpc/grpc-js et uuid via npm audit fix",
+        "it": "Correzione GHSA-gv7w-rqvm-qjhr: Sovrascrivere esbuild a 0.28.1 (chiude l'advisory RCE sull'integrità binaria di esbuild Deno)\nAggiornare ws a 8.21.0 (chiude GHSA-58qx-3vcg-4xpx e GHSA-96hv-2xvq-fx4p)\nRisolvere gli advisory transitivi di @grpc/grpc-js e uuid tramite npm audit fix",
+        "es": "Corregir GHSA-gv7w-rqvm-qjhr: Anular esbuild a 0.28.1 (cierra el aviso RCE de integridad binaria de esbuild Deno)\nActualizar ws a 8.21.0 (cierra GHSA-58qx-3vcg-4xpx y GHSA-96hv-2xvq-fx4p)\nResolver los avisos transitivos de @grpc/grpc-js y uuid mediante npm audit fix",
+        "pl": "Poprawiono GHSA-gv7w-rqvm-qjhr: Zastąp esbuild wersją 0.28.1 (zamyka ostrzeżenie RCE dotyczące integralności binarnej esbuild Deno)\nZaktualizuj ws do 8.21.0 (zamyka GHSA-58qx-3vcg-4xpx i GHSA-96hv-2xvq-fx4p)\nRozwiąż przechodnie ostrzeżenia @grpc/grpc-js i uuid za pomocą npm audit fix",
+        "uk": "Виправлення GHSA-gv7w-rqvm-qjhr: Перевизначення esbuild на 0.28.1 (закриває застереження RCE щодо цілісності двійкового файлу esbuild Deno)\nОновлення ws до 8.21.0 (закриває GHSA-58qx-3vcg-4xpx та GHSA-96hv-2xvq-fx4p)\nУсунення транзитивних застережень @grpc/grpc-js та uuid через npm audit fix",
+        "zh-cn": "修复 GHSA-gv7w-rqvm-qjhr：将 esbuild 覆盖为 0.28.1（关闭 esbuild Deno 二进制完整性 RCE 公告）\n将 ws 更新为 8.21.0（关闭 GHSA-58qx-3vcg-4xpx 和 GHSA-96hv-2xvq-fx4p）\n通过 npm audit fix 解决传递依赖 @grpc/grpc-js 和 uuid 的公告"
+      },
       "1.6.5": {
         "en": "Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (also closes 6 further protobufjs advisories)\nUpdate axios to 1.16.1 (closes 13 axios advisories)\nOverride esbuild to 0.25.x (closes GHSA-67mh-4wv8-2f99)",
         "de": "Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (verschließt auch 6 weitere protobufjs Advisories)\nAxios auf 1.16.1 aktualisieren (schließt 13 Axios-Berater)\nOverride esbuild to 0.25.x (schließt GHSA-67mh-4wv8-2f99)",
