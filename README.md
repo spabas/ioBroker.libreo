@@ -19,6 +19,11 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (spabas) Fix GHSA-gv7w-rqvm-qjhr: Override esbuild to 0.28.1 (closes esbuild Deno binary integrity RCE advisory)
+* (spabas) Update ws to 8.21.0 (closes GHSA-58qx-3vcg-4xpx and GHSA-96hv-2xvq-fx4p)
+* (spabas) Resolve transitive @grpc/grpc-js and uuid advisories via npm audit fix
+
 ### 1.6.5 (2026-05-14)
 * (spabas) Fix GHSA-66ff-xgx4-vchm: Update protobufjs to 7.5.8 (also closes 6 further protobufjs advisories)
 * (spabas) Update axios to 1.16.1 (closes 13 axios advisories)
