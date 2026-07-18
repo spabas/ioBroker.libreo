@@ -19,7 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.6.7 (2026-07-18)
 * (spabas) Fix CVE-2026-9697 / GHSA-vmh5-mc38-953g: Update undici to 7.28.0 (closes undici TLS certificate validation bypass via SOCKS5 ProxyAgent and further undici advisories)
 * (spabas) Update form-data to 4.0.6 (closes GHSA-hmw2-7cc7-3qxx CRLF injection)
 * (spabas) Resolve transitive js-yaml (GHSA-h67p-54hq-rp68) and protobufjs (GHSA-wcpc-wj8m-hjx6) advisories via npm audit fix

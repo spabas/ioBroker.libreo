@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.6",
+    "version": "1.6.7",
     "news": {
+      "1.6.7": {
+        "en": "Fix CVE-2026-9697 / GHSA-vmh5-mc38-953g: Update undici to 7.28.0 (closes undici TLS certificate validation bypass via SOCKS5 ProxyAgent and further undici advisories)\nUpdate form-data to 4.0.6 (closes GHSA-hmw2-7cc7-3qxx CRLF injection)\nResolve transitive js-yaml (GHSA-h67p-54hq-rp68) and protobufjs (GHSA-wcpc-wj8m-hjx6) advisories via npm audit fix",
+        "de": "Behebt CVE-2026-9697 / GHSA-vmh5-mc38-953g: Aktualisiert undici auf Version 7.28.0 (schließt die Umgehung der TLS-Zertifikatvalidierung durch undici über SOCKS5 ProxyAgent und weitere undici-Sicherheitslücken)\nFormulardaten auf Version 4.0.6 aktualisieren (behebt CRLF-Einfügung in GHSA-hmw2-7cc7-3qxx)\nBehebt transitive js-yaml (GHSA-h67p-54hq-rp68) und protobufjs (GHSA-wcpc-wj8m-hjx6) Sicherheitswarnungen über npm audit fix",
+        "ru": "Исправлена уязвимость CVE-2026-9697 / GHSA-vmh5-mc38-953g: обновлена версия undici до 7.28.0 (закрывает обход проверки TLS-сертификатов undici через SOCKS5 ProxyAgent и дальнейшие уведомления undici).\nОбновить данные формы до версии 4.0.6 (закрывает инъекцию CRLF GHSA-hmw2-7cc7-3qxx)\nУстранены ошибки транзитивности js-yaml (GHSA-h67p-54hq-rp68) и protobufjs (GHSA-wcpc-wj8m-hjx6) с помощью npm audit fix.",
+        "pt": "Correção da vulnerabilidade CVE-2026-9697 / GHSA-vmh5-mc38-953g: Atualização do undici para a versão 7.28.0 (corrige a vulnerabilidade de bypass da validação de certificado TLS do undici via SOCKS5 ProxyAgent e outras correções do undici).\nAtualização de dados do formulário para 4.0.6 (fecha a injeção GHSA-hmw2-7cc7-3qxx CRLF)\nResolver avisos transitivos de js-yaml (GHSA-h67p-54hq-rp68) e protobufjs (GHSA-wcpc-wj8m-hjx6) por meio de correção de auditoria do npm",
+        "nl": "Oplossing voor CVE-2026-9697 / GHSA-vmh5-mc38-953g: Update undici naar 7.28.0 (sluit de bypass van de TLS-certificaatvalidatie van undici via SOCKS5 ProxyAgent en andere undici-adviezen)\nUpdate form-data naar 4.0.6 (sluit GHSA-hmw2-7cc7-3qxx CRLF-injectie)\nLos de transitieve js-yaml (GHSA-h67p-54hq-rp68) en protobufjs (GHSA-wcpc-wj8m-hjx6) adviezen op via npm audit fix",
+        "fr": "Correctif CVE-2026-9697 / GHSA-vmh5-mc38-953g : Mise à jour d’undici vers la version 7.28.0 (correction du contournement de la validation du certificat TLS d’undici via SOCKS5 ProxyAgent et d’autres vulnérabilités d’undici)\nMise à jour des données du formulaire vers la version 4.0.6 (fermeture de l'injection CRLF GHSA-hmw2-7cc7-3qxx)\nRésolution des avertissements transitifs js-yaml (GHSA-h67p-54hq-rp68) et protobufjs (GHSA-wcpc-wj8m-hjx6) via la correction d'audit npm",
+        "it": "Correzione di CVE-2026-9697 / GHSA-vmh5-mc38-953g: Aggiornamento di undici alla versione 7.28.0 (chiude la vulnerabilità di bypass della convalida del certificato TLS di undici tramite SOCKS5 ProxyAgent e altri avvisi di undici)\nAggiornare form-data alla versione 4.0.6 (chiude l'iniezione CRLF GHSA-hmw2-7cc7-3qxx)\nRisolvere gli avvisi transitivi js-yaml (GHSA-h67p-54hq-rp68) e protobufjs (GHSA-wcpc-wj8m-hjx6) tramite npm audit fix",
+        "es": "Soluciona la vulnerabilidad CVE-2026-9697 / GHSA-vmh5-mc38-953g: Actualiza undici a la versión 7.28.0 (corrige la omisión de la validación del certificado TLS de undici a través de SOCKS5 ProxyAgent y otros avisos de undici).\nActualizar los datos del formulario a la versión 4.0.6 (cierra la inyección CRLF GHSA-hmw2-7cc7-3qxx)\nResuelva las advertencias transitivas de js-yaml (GHSA-h67p-54hq-rp68) y protobufjs (GHSA-wcpc-wj8m-hjx6) mediante una corrección de auditoría de npm.",
+        "pl": "Naprawiono błąd CVE-2026-9697 / GHSA-vmh5-mc38-953g: zaktualizowano undici do wersji 7.28.0 (zamyka się funkcja pomijania weryfikacji certyfikatu TLS undici za pośrednictwem agenta proxy SOCKS5 i pojawiają się dalsze ostrzeżenia undici)\nAktualizacja danych formularza do wersji 4.0.6 (zamyka wstrzykiwanie CRLF GHSA-hmw2-7cc7-3qxx)\nRozwiązanie ostrzeżeń dotyczących przechodnich plików js-yaml (GHSA-h67p-54hq-rp68) i protobufjs (GHSA-wcpc-wj8m-hjx6) za pomocą poprawki audytu npm",
+        "uk": "Виправлення CVE-2026-9697 / GHSA-vmh5-mc38-953g: оновлення undici до версії 7.28.0 (закриває обхід перевірки сертифікатів TLS undici через SOCKS5 ProxyAgent та подальші рекомендації undici)\nОновити form-data до версії 4.0.6 (закриває ін'єкцію CRLF GHSA-hmw2-7cc7-3qxx)\nВирішення проблем із транзитивними js-yaml (GHSA-h67p-54hq-rp68) та protobufjs (GHSA-wcpc-wj8m-hjx6) за допомогою виправлення аудиту npm",
+        "zh-cn": "修复 CVE-2026-9697 / GHSA-vmh5-mc38-953g：将 undici 更新至 7.28.0（修复了通过 SOCKS5 ProxyAgent 绕过 undici TLS 证书验证的漏洞以及其他 undici 相关安全公告）\n更新表单数据至 4.0.6（关闭 GHSA-hmw2-7cc7-3qxx CRLF 注入）\n通过 npm 审计修复解决传递性 js-yaml (GHSA-h67p-54hq-rp68) 和 protobufjs (GHSA-wcpc-wj8m-hjx6) 安全建议"
+      },
       "1.6.6": {
         "en": "Fix GHSA-gv7w-rqvm-qjhr: Override esbuild to 0.28.1 (closes esbuild Deno binary integrity RCE advisory)\nUpdate ws to 8.21.0 (closes GHSA-58qx-3vcg-4xpx and GHSA-96hv-2xvq-fx4p)\nResolve transitive @grpc/grpc-js and uuid advisories via npm audit fix",
         "de": "Fix GHSA-gv7w-rqvm-qjhr: esbuild auf 0.28.1 überschreiben (schließt esbuild Deno Binary-Integritäts-RCE-Advisory)\nws auf 8.21.0 aktualisieren (schließt GHSA-58qx-3vcg-4xpx und GHSA-96hv-2xvq-fx4p)\nTransitive @grpc/grpc-js- und uuid-Advisories per npm audit fix beheben",
@@ -80,32 +93,6 @@
         "pl": "Lib update / audyt fix",
         "uk": "Оновлення Lib / аудит виправити",
         "zh-cn": "Lib 更新/审计修正"
-      },
-      "1.6.0": {
-        "en": "Lib update / audit fix",
-        "de": "Lib update / audit fix",
-        "ru": "Обновление Lib / исправление аудита",
-        "pt": "Atualização da Lib / correção de auditoria",
-        "nl": "Lib update / audit fix",
-        "fr": "Lib mise à jour / correction d'audit",
-        "it": "Aggiornamento Lib / correzione di audit",
-        "es": "Actualización de Lib / corrección de auditoría",
-        "pl": "Lib update / audyt fix",
-        "uk": "Оновлення Lib / аудит виправити",
-        "zh-cn": "Lib 更新/审计修正"
-      },
-      "1.5.1": {
-        "en": "Reconnect to stream if receiving session state 266 (continue charging)",
-        "de": "Wiederzuschalten, wenn der Sitzungszustand 266 empfangen wird (Weiterladung)",
-        "ru": "Воссоединитесь к потоку, если состояние сеанса 266 (продолжение зарядки)",
-        "pt": "Reconectar ao fluxo se receber o estado de sessão 266 (continuar a cobrar)",
-        "nl": "Herverbinding met stream als sessiestatus 266 wordt ontvangen (doorladen)",
-        "fr": "Reconnecter au flux si l'état de session de réception 266 (continuer la charge)",
-        "it": "Ricollegare al flusso se ricevendo lo stato di sessione 266 (continua la ricarica)",
-        "es": "Reconnect to stream if receiving session state 266 (continue charge)",
-        "pl": "Przywróć strumień, jeśli odbierasz stan sesji 266 (kontynuować ładowanie)",
-        "uk": "Від'єднатися до потоку, якщо отримувати стан сеансу 266 (продовження зарядки)",
-        "zh-cn": "如果接收会话状态为 266 , 则重新连接到流( 继续充电)"
       }
     },
     "title": "Libreo Wallbox",
