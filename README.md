@@ -19,7 +19,7 @@ Get informations for libreo wallboxes
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.6.8 (2026-10-03)
 * (spabas) Fix CVE-2026-19534 / GHSA-rfgv-xxqx-mfg5: Bump undici to 7.30.0 (closes undici WebSocket denial of service via unrequested subprotocol)
 * (spabas) Fix CVE-2026-84961 / GHSA-w293-vg96-wgc3: undici TLS certificate validation bypass via dropped connect options in BalancedPool (fixed by the same undici bump)
 * (spabas) Drop unused transitive undici 6.x (optional peer of http-cookie-agent), closing its advisories as well

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "libreo",
-    "version": "1.6.7",
+    "version": "1.6.8",
     "news": {
+      "1.6.8": {
+        "en": "Fix CVE-2026-19534 / GHSA-rfgv-xxqx-mfg5: Bump undici to 7.30.0 (closes undici WebSocket denial of service via unrequested subprotocol)\nFix CVE-2026-84961 / GHSA-w293-vg96-wgc3: undici TLS certificate validation bypass via dropped connect options in BalancedPool (fixed by the same undici bump)\nDrop unused transitive undici 6.x (optional peer of http-cookie-agent), closing its advisories as well\nResolve remaining dev-dependency advisories (brace-expansion, js-yaml, adm-zip) via npm audit fix - npm audit now reports 0 vulnerabilities",
+        "de": "Fix CVE-2026-19534/GHSA-RFGV-xxqx-MFG5: Bump undici auf 7.30.0 (schließt Undici WebSocket per unangefordertem Subprotokoll)\nFix CVE-2026-84961/Ghsa-W293-VG96-WGC3: Umgehung des UNDICI-TLS-Zertifikats über Drop-Connect-Optionen in BalancedPool (behoben durch denselben UNI-Bump)\nLöschen Sie unbenutzte Transitive Undici 6.x (optionaler Peer von Http-Cookie-Agent) und schließen Sie auch\nLöse verbleibende Dev-Dependency-Hinweise (Brace-Expansion, JS-YAML, ADM-Zip) per npm audit fix — npm audit meldet jetzt 0 Schwachstellen",
+        "ru": "Исправление CVE-2026-19534 /GHSA-RFGV-XXQX-MFG5: повышение индекса до 7.30.0 (закрывает отдельные случаи отказа в обслуживании WebSocket по незапрошенному субпротоколу)\nИсправление CVE-2026-84961/ GHSA-W293-VG96-WGC3: обход проверки сертификата undici TLS с помощью пропущенных опций подключения в BalancedPool (исправлено тем же ударом indici)\nУдалите неиспользуемый транзитивный файл undici 6.x (необязательный аналог http-cookie-agent), а также закройте его рекомендации\nУстраните оставшиеся рекомендации по зависимости от разработчиков (расширение скобок, js-yaml, adm-zip) с помощью исправления аудита npm — теперь npm audit сообщает об 0 уязвимостях",
+        "pt": "Fix CVE-2026-19534 /GHSA-RFGV-xxqx-mfg5: Bump undici to 7.30.0 (fecha a negação de serviço do WebSocket via subprotocolo não solicitado)\nCorrija CVE-2026-84961/GHSA-W293-VG96-WGC3: desvie a validação do certificado TLS via opção de conexão perdida no BalancedPool (corrigido pelo mesmo erro)\nElimine o transitivo undici 6.x (par opcional de http-cookie-agent) e feche seus avisos\nResolva os alertas de dependência de desenvolvimento restantes (brace-expansion, js-yaml, adm-zip) via npm audit fix - agora relata 0 vulnerabilidades",
+        "nl": "CVE-2026-19534/GHSA-RFGV-xxQX-MFG5 repareren: Undici naar 7.30.0 brengen (sluit undici WebSocket denial of service af via een ongevraagd subprotocol)\nFix CVE-2026-84961/GHSA-W293-VG96-WGC3: bypass voor validatie van het TLS-certificaat undici via verbroken verbindingsopties in BalancedPool (opgelost door dezelfde Undici bump)\nLaat ongebruikte transitieve undici 6.x (optionele peer van http-cookie-agent) vallen en sluit ook de adviezen\nLos de resterende adviezen over ontwikkelafhankelijkheid op (brace-expansion, js-yaml, adm-zip) via npm audit fix - npm audit rapporteert nu 0 kwetsbaarheden",
+        "fr": "Corriger CVE-2026-19534/GHSA-RFGV-xxQX-MFG5 : passe à la 7.30.0 (ferme le déni de service WebSocket Undici via un sous-protocole non demandé)\nCorrectif CVE-2026-84961/GHSA-W293-VG96-WGC3 : contournement de la validation des certificats TLS via des options de connexion supprimées dans BalancedPool (corrigé par le même undici)\nSupprimez l'undici 6.x transitif non utilisé (pair optionnel de http-cookie-agent) et fermez ses avis\nRésolvez les derniers avis de dépendance au développement (brace-expansion, js-yaml, adm-zip) via npm audit fix. NPM Audit ne signale désormais aucune faille",
+        "it": "Correzione CVE-2026-19534/GHSA-RFGV-XXQX-MFG5: Passa a 7.30.0 (chiude il DNS Unici WebSocket tramite sottoprotocollo non richiesto)\nCorrezione CVE-2026-84961/GHSA-W293-VG96-WGC3: bypass del certificato TLS undici tramite opzioni di connessione interrotta in BalancedPool\nElimina Undici 6.x transitivo inutilizzato (peer opzionale di http-cookie-agent) e chiude i suoi avvisi\nRisolve i restanti avvisi di sviluppo (brace-expansion, js-yaml, adm-zip) tramite npm audit fix - npm audit ora segnala 0 vulnerabilità",
+        "es": "Fix CVE-2026-19534/GHSA-RFGV-xxQx-MFG5: Salta Undici a 7.30.0 (cierra la denegación de servicio de Undici WebSocket mediante un subprotocolo no solicitado)\nFix CVE-2026-84961/ GHSA-W293-VG96-WGC3: omisión de validación del certificado TLS de Undici por falta de opciones de conexión en BalancedPool (corregido por el mismo golpe de undici)\nElimine Undici 6.x transitivo sin usar (par opcional de http-cookie-agent) y cierre también sus avisos\nResolver los avisos de dependencia restantes (brace-expansion, js-yaml, adm-zip) mediante npm audit fix. npm audit ahora informa de 0 vulnerabilidades",
+        "pl": "Poprawka CVE-2026-19534/GHSA-RFGV-XXQX-MFG5: Bump undici do 7.30.0 (zamyka odmowę usługi WebSocket za pomocą nieżądanego podprotokołu)\nNapraw CVE-2026-84961/GHSA-W293-VG96-WGC3: obejście sprawdzania poprawności certyfikatu TLS przez upuszczone opcje połączenia w BalancedPool (naprawione przez ten sam bump)\nUpuść nieużywany przechodni undici 6.x (opcjonalny peer http-cookie-agent), zamykając również jego zalecenia\nRozwiązywanie pozostałych zaleceń dotyczących zależności dev-dev (brace-extension, js-yaml, adm-zip) za pomocą poprawki audytu npm - audyt npm zgłasza teraz 0 luk w zabezpieczeniach",
+        "uk": "Виправлено виправлення CVE-2026-19534/GHSA-RFGV-xxqx-MFG5: Перехід до 7.30.0 (закриває відмову в обслуговуванні undici WebSocket через незапитуваний підпротокол)\nВиправлено виправлення CVE-2026-84961/GHSA-W293-VG96-WGc3: скасування обходу перевірки сертифіката TLS через скинуті параметри підключення в BalancedPool (виправлено тим самим підривом undici)\nВикиньте невикористаний перехідний undici 6.x (необов'язковий одноранжник http-cookie-agent), закривши також його рекомендації\nВирішення залишків рекомендацій щодо залежності від розробників (brace-expansion, js-yaml, adm-zip) за допомогою виправлення аудиту npm - аудит npm тепер повідомляє про 0 вразливостей",
+        "zh-cn": "修复 CVE-2026-19534/GHSA-rfgv-xxqx-MFG5：将 undici 升级到 7.30.0（通过未请求的子协议关闭 undici WebSocket 拒绝服务）\n修复 CVE-2026-84961/GHSA-w293-vg96-WGC3：通过 BalancedPool 中断连接选项绕过 undici TLS 证书验证（由同样的 undici bump 修复）\n删除未使用的传递函数 undici 6.x（http-cookie-agent 的可选对等方），同时关闭其公告\n通过 npm 审计修复解决剩余的开发依赖建议（大括号扩展、js-yaml、adm-zip）-npm audit 现在报告 0 个漏洞"
+      },
       "1.6.7": {
         "en": "Fix CVE-2026-9697 / GHSA-vmh5-mc38-953g: Update undici to 7.28.0 (closes undici TLS certificate validation bypass via SOCKS5 ProxyAgent and further undici advisories)\nUpdate form-data to 4.0.6 (closes GHSA-hmw2-7cc7-3qxx CRLF injection)\nResolve transitive js-yaml (GHSA-h67p-54hq-rp68) and protobufjs (GHSA-wcpc-wj8m-hjx6) advisories via npm audit fix",
         "de": "Behebt CVE-2026-9697 / GHSA-vmh5-mc38-953g: Aktualisiert undici auf Version 7.28.0 (schließt die Umgehung der TLS-Zertifikatvalidierung durch undici über SOCKS5 ProxyAgent und weitere undici-Sicherheitslücken)\nFormulardaten auf Version 4.0.6 aktualisieren (behebt CRLF-Einfügung in GHSA-hmw2-7cc7-3qxx)\nBehebt transitive js-yaml (GHSA-h67p-54hq-rp68) und protobufjs (GHSA-wcpc-wj8m-hjx6) Sicherheitswarnungen über npm audit fix",
@@ -69,19 +82,6 @@
         "zh-cn": "Fix CVE-2026-40175:将轴线更新至1.15.0"
       },
       "1.6.2": {
-        "en": "Lib update / audit fix",
-        "de": "Lib update / audit fix",
-        "ru": "Обновление Lib / исправление аудита",
-        "pt": "Atualização da Lib / correção de auditoria",
-        "nl": "Lib update / audit fix",
-        "fr": "Lib mise à jour / correction d'audit",
-        "it": "Aggiornamento Lib / correzione di audit",
-        "es": "Actualización de Lib / corrección de auditoría",
-        "pl": "Lib update / audyt fix",
-        "uk": "Оновлення Lib / аудит виправити",
-        "zh-cn": "Lib 更新/审计修正"
-      },
-      "1.6.1": {
         "en": "Lib update / audit fix",
         "de": "Lib update / audit fix",
         "ru": "Обновление Lib / исправление аудита",
